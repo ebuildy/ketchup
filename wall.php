@@ -432,6 +432,6 @@ function getMixRow(){
     <script type='text/javascript' src='js/camera.js'></script>
     <!-- Custom Js -->
     <script src="js/init.js"></script>
-  
+  <script src="js/wall.js"></script>
   </body>
 </html>

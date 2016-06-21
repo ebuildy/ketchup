@@ -55,6 +55,7 @@
 html
 {
     background-color: #3f51b5;
+	    background-color: #eaeaea;
 }
 
 /**************************************************** 1. General Style **************************************************************/
@@ -145,7 +146,7 @@ header{
   -pie-transition-duration: 0.8s;
 }
 header.header-fix{
-  height: 70px;
+  height: 140px;
   top:0;
   background-color: #fff;
   z-index: 997;
@@ -156,6 +157,46 @@ header.header-fix{
   -pie-transition-duration: 0.8s;
   position: fixed;
 }
+
+
+header.header-fix a , header.header-fix img{
+	  transition-duration: 0.8s;
+  -webkit-transition-duration: 0.8s;
+  -ms-transition-duration: 0.8s;
+  -pie-transition-duration: 0.8s;
+}
+
+header.header-fix.scroll, header.header-fix.scroll .header-top{
+		height:70px;
+}
+.header-fix.scroll .img-avatar{
+		margin-top:8px;
+		width: 50px;
+    height: 50px;
+
+}
+
+.wrapper.scroll{
+	    margin-top: 100px;
+}
+
+.page-footer.scroll .logo a{
+	display:none;
+}
+
+
+
+.header-fix.scroll .logo a{
+	position: absolute;
+    left: 40px;
+	right: initial;
+	top: initial;
+	bottom: initial;
+}
+.header-fix.scroll .logo img{
+	    height: 45px;	
+}
+
 header.header-fix .nav-wrapper.menu-category a{ color: #444; padding: 0 30px;}
 header.header-fix .header-top{ height: 140px; line-height: 60px;  }
 .header-top {
@@ -163,9 +204,9 @@ header.header-fix .header-top{ height: 140px; line-height: 60px;  }
   height: 90px;
   line-height: 80px;
   transition-duration: 0.8s;
-  -webkit-transition-duration: 0.8s;
-  -ms-transition-duration: 0.8s;
-  -pie-transition-duration: 0.8s;
+  -webkit-transition-duration: 0.3;
+  -ms-transition-duration: 0.3s;
+  -pie-transition-duration: 0.3s;
 }
 header.header-fix .header-top{ background-color: #3f51b5; }
 nav{
@@ -263,7 +304,12 @@ nav .button-collapse i{ font-size: 2.1rem; }
   text-align: center;
   line-height: 0;
 }
-.logo > a{ display: inline-block; line-height: 0; }
+.logo > a{ display: inline-block; line-height: 0;     position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;}
 .header-fix .logo{ padding: 10px 0;}
 
 .brand-logo {
