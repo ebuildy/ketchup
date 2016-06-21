@@ -14,7 +14,7 @@
             <i class="fa fa-refresh fa-spin fa-3x fa-fw"></i>
         </div>
         <div id="btSauceWrapper">
-            <a id="btSauce" href="wall.php"><i class="fa fa-flask"></i> Sauce with ketchup!</a>
+            <a id="btSauce" href="#" onclick="$('#form').submit()"><i class="fa fa-flask"></i> Sauce with ketchup!</a>
         </div>
     </div>
 
@@ -33,12 +33,11 @@
 
             var access_token = window.location.hash.substring(1);
 
-            $('#btSauce').attr('href', 'wall.php?access_token=' + access_token);
-
-            FB.api('/me?fields=name,about,relationship_status,gender,location,locale,interested_in,sports,inspirational_people,work,website,hometown,books,family,tagged_places,music,favorite_teams,favorite_athletes', function(response)
+            FB.api('/me?fields=name,about,relationship_status,gender,location,locale,sports,inspirational_people,work,website,hometown,books,family,tagged_places,music,favorite_teams,favorite_athletes', function(response)
             {
                 var data = {
                     gender : '',
+                    relationship_status: '',
                     locale : 'en_US',
                     hometown : '',
                     location : '',
@@ -57,6 +56,11 @@
                 if (response.hasOwnProperty('locale'))
                 {
                     data.locale = response.locale;
+                }
+
+                if (response.hasOwnProperty('relationship_status'))
+                {
+                    data.relationship_status = response.relationship_status;
                 }
 
                 if (response.hasOwnProperty('hometown') && response.hometown.hasOwnProperty('name'))
@@ -116,14 +120,23 @@
 
         function buildUserBagWords(data)
         {
-            var html = '';
+            var html = '<table>';
 
             $.each(data, function(i, item)
             {
                 html += '<tr><td style="color: #6BE234">' + i + '</td><td>' + item + '</td></tr>';
             });
-            console.log(data);
-            $('#dataExtracted').html('<table>' + html + '</table>');
+
+            html += '</table><form id="form" action="wall2.php">';
+
+            $.each(data, function(i, item)
+            {
+                html += '<input type="hidden" name="' + i + '" value="' + item + '" />';
+            });
+
+            html += '</form>';
+
+            $('#dataExtracted').html(html);
         }
 
         (function(d, s, id){
