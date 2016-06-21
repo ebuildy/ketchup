@@ -371,27 +371,25 @@ function getDescription($obj){
                 </div>
               
                 <div class="row">
-                    <div class="col l6 col m6 col s12">
-                        <!-- News Blog Solid Box -->
-                        <div class="news-blog solid z-depth-1">
-                            <!-- News Blog Category -->
-                            <div class="news-category">
-                                <span class="pink">More</span>
-                                <!-- Dropdown -->
-                                <div class="news-dropdown">
-                                    <a class="dropdown-button" href="javascript:void(0);" data-activates="dropdown1"><i class="fa fa-ellipsis-v "></i></a>
-                                    <ul id="dropdown1" class="dropdown-content">
-                                        <li><a href="javascript:void(0);">Option 1</a></li>
-                                        <li><a href="javascript:void(0);">Option 1</a></li>
-                                        <li><a href="javascript:void(0);">Option 1</a></li>
-                                    </ul>
-                                </div>
+                   <div class="col l6 col m6 col s12">
+                        <!-- News Blog Box -->
+                        <div class="news-blog z-depth-1">
+                            <!-- News Blog Image -->
+							<?php $obj = loadData(); ?>
+                            
+                            <div class="image">
+                                <img class="responsive-img" src="<?php echo $obj['thumbnail']; ?>" alt="news Image">
                             </div>
+                            <!-- News Blog Category -->
+                            
                             <!-- News Blog Description -->
-                            <div class="news-description center-align">
-                                <div class="quote"><i class="fa fa-quote-left"></i></div>
-                                <div class="news-title"> <a href="javascript:void(0);"> Nam erat nulla, auctor a eros vitae, hendrerit efficitur magna et bibendum leo metus vel magna.  </a></div>
-                                <div class="news-content"><p>President of ThemeLeague <br> Dark Waider</p></div>
+							
+                            <div class="news-description">
+                                <div class="news-time">
+                                    <?php echo $obj['time']; ?>
+                                </div>
+                                <div class="news-title"> <a href="<?php echo $obj['link']; ?>"><?php echo $obj['title']; ?></a></div>
+                                <div class="news-content"><?php getDescription($obj); ?></div>
                             </div>
                         </div>
                     </div>
@@ -399,29 +397,21 @@ function getDescription($obj){
                         <!-- News Blog Box -->
                         <div class="news-blog z-depth-1">
                             <!-- News Blog Image -->
+							<?php $obj = loadData(); ?>
+                            
                             <div class="image">
-                                <img class="responsive-img" src="http://placehold.it/350x235?text=News Image" alt="news Image">
+                                <img class="responsive-img" src="<?php echo $obj['thumbnail']; ?>" alt="news Image">
                             </div>
                             <!-- News Blog Category -->
-                            <div class="news-category">
-                                <span class="green">Money</span>
-                                <!-- Dropdown -->
-                                <div class="news-dropdown">
-                                    <a class="dropdown-button" href="javascript:void(0);" data-activates="dropdown2"><i class="fa fa-ellipsis-v "></i></a>
-                                    <ul id="dropdown2" class="dropdown-content">
-                                        <li><a href="javascript:void(0);">Option 1</a></li>
-                                        <li><a href="javascript:void(0);">Option 1</a></li>
-                                        <li><a href="javascript:void(0);">Option 1</a></li>
-                                    </ul>
-                                </div>
-                            </div>
+                            
                             <!-- News Blog Description -->
+							
                             <div class="news-description">
                                 <div class="news-time">
-                                    21 min ago 
+                                    <?php echo $obj['time']; ?>
                                 </div>
-                                <div class="news-title"> <a href="javascript:void(0);">Party Sweepsto Israel <br> election Victory</a></div>
-                                <div class="news-content"><p>et bibendum leo metus vel magna. In dapibus <br> ac tellus non rutrum. Integer.</p></div>
+                                <div class="news-title"> <a href="<?php echo $obj['link']; ?>"><?php echo $obj['title']; ?></a></div>
+                                <div class="news-content"><?php getDescription($obj); ?></div>
                             </div>
                         </div>
                     </div>

@@ -676,8 +676,8 @@ ul.pgwSlider > li span, .pgwSlider > .ps-list > li span
 
 /************************ 4.5 News Blog **********************/
 
-.news-blog { position: relative; min-height: 440px; }
-.news-blog .image .responsive-img{ min-height: 440px;}
+.news-blog { position: relative; max-height: 440px; }
+.news-blog .image .responsive-img{ height: 440px;}
 .news-blog .news-description {
   position: absolute;
   bottom: 0;
