@@ -1,5 +1,6 @@
 <?php 
 
+$avatar = "https://avatars1.githubusercontent.com/u/5296748?v=3&amp;s=460";
 $data = array();
 
 $data[0]['title'] = "<b>Bayern Munich</b> defender Mats Hummels explains why he snubbed Manchester United transfer";
