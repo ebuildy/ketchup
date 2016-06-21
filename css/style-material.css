@@ -1907,9 +1907,9 @@ nav ul a{ padding-left: 15px !important; padding-right: 15px !important; font-si
 .tag-place
 {
     position: absolute;
-    top: 2px;
-    left: 2px;
-    background: red;
+    top: 4px;
+    left: 4px;
+    background: #7587ef;
     width: 24px;
     height: 24px;
     text-align: center;
