@@ -8,7 +8,7 @@ $(function()
         $(this).height($("#header_video").height() );
         if( $(this).attr('data-background') ){
             $(this).append('<div></div>');
-            $(this).find('div').css('background-image', 'url(' + $(this).attr('data-background') + ')' ).height("100%");
+            $(this).find('div').css('background-image', 'url(' + $(this).attr('data-background') + ')' ).css('background-position', 'center').css('background-size', $(document).width()+'px ' + $(document).height() + 'px').height("100%");
         }
         $(this).mb_YTPlayer();
     });

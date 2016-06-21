@@ -124,7 +124,7 @@ a:focus { outline: none; }
   margin: 20px 0;
   text-transform: uppercase;
 }
-img.responsive-img{ width: 100%; display: inherit;}
+img.responsive-img{ width: 100%; min-height:168px;display: inherit;}
 p{ color: #8b8b8b;}
 *::-moz-placeholder{ color: #000; }
 
