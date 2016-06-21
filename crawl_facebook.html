@@ -20,9 +20,14 @@
                 version    : 'v2.6'
             });
 
-            var hash = window.location.hash.substring(1);
+            var access_token = window.location.hash.substring(1);
 
-            console.log(hash);
+            FB.api('/me?fields=about,relationship_status,gender,location,locale,interested_in,sports,inspirational_people,work,website,hometown,books,family,tagged_places,music,favorite_teams,favorite_athletes', function(response)
+            {
+                console.log(response);
+            }, {
+                access_token : access_token
+            });
         };
 
         (function(d, s, id){
