@@ -8,16 +8,13 @@ $data[0]['description'] = "United were interested in Hummels in 2014 but he stay
 $data[0]['thumbnail'] = "http://i3.mirror.co.uk/incoming/article7759087.ece/ALTERNATES/s615/Liverpool-v-Borussia-Dortmund-UEFA-Europa-League-Quarter-Final-Second-Leg";
 $data[0]['time'] = "Today";
 $data[0]['link'] = "http://www.mirror.co.uk/sport/football/news/bayern-munich-defender-mats-hummels-8243416";
-$data[0]['tags']['type'] = "place";
-$data[0]['tags']['q'] = "Munich";
+
 
 $data[1]['title'] = "Why The Legend of <b>Zelda</b>: Breath of the Wild was the Best Game at E3 2016";
 $data[1]['description'] = "One week ago, I played <b>Zelda</b>: Breath of the Wild and thought it was <b>Nintendo</b>'s most ambitious game in years. It was the first game I played at this year's E3...";
 $data[1]['thumbnail'] = "http://cloud.attackofthefanboy.com/wp-content/uploads/2016/02/The-Legend-of-Zelda-Wii-U.jpg?fb38c8";
 $data[1]['time'] = "Today";
 $data[1]['link'] = "http://www.eurogamer.net/articles/2016-06-20-we-played-zelda-breath-of-the-wild-four-times-and-still-didnt-see-it-all";
-$data[1]['tags']['type'] = "place";
-$data[2]['tags']['q'] = "Zelda";
 
 $data[2]['title'] = "Samsung Galaxy S7 vs <b>OnePlus</b> 3 specs comparison: Latest flagship from OnePlus 3 has outstanding hardware";
 $data[2]['description'] = "Samsung and <b>Apple</b> are quickly being challenged by up-and-coming Asian smartphone manufacturers and one of them is <b>OnePlus</b>. Recently, the company brought out its flagship OnePlus 3 device...";
@@ -46,7 +43,8 @@ $data[4]['link'] = "http://www.businessinsider.de/apple-watchos-30-is-a-major-in
 $data[4]['shopping']['link'] = "http://ad.zanox.com/ppc/?28802022C11983670&ULP=[[flip4new.de/p/38153-verkaufen]]&zpar9=[[43EEF0445509C7205827]]";
 $data[4]['shopping']['price'] = "449,00 €";
 $data[4]['shopping']['title'] = "Apple Watch";
-
+$data[4]['tags']['type'] = "place";
+$data[4]['tags']['q'] = "Apple";
 
 $data[5]['title'] = "<b>Docker</b> builds container orchestration right into its core <b>Docker</b> Engine";
 $data[5]['description'] = "<b>Docker</b>, which is hosting its sold-out developer conference in Seattle this week, today announced a major addition to its core <b>Docker</b> Engine";

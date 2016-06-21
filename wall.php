@@ -105,14 +105,15 @@ function getRow2x2(){
 				<!-- News Blog Category -->
 				
 				<!-- News Blog Description -->
-				
-				<div class="news-description">
-					<div class="news-time">
-						<?php echo $obj['time']; ?>
+				<div class="news-description-bottom">
+					<div class="news-description">
+						<div class="news-time">
+							<?php echo $obj['time']; ?>
+						</div>
+						<div class="news-title"> <a href="<?php echo $obj['link']; ?>"><?php echo $obj['title']; ?></a></div>
 					</div>
-					<div class="news-title"> <a href="<?php echo $obj['link']; ?>"><?php echo $obj['title']; ?></a></div>
+					<?php getDescription($obj); ?>
 				</div>
-				<?php getDescription($obj); ?>
 			</div>
 		</div>
 <?php	
@@ -396,7 +397,7 @@ function getMixRow(){
         <div class="wrapper">
             <div class="container">
 
-                <h1>Digital content that matters only to you</h1>
+                <h1>Digital content that only matters to you</h1>
 			
 				<?php
 				getMixRow(); 

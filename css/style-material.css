@@ -58,6 +58,7 @@ html
 }
 
 /**************************************************** 1. General Style **************************************************************/
+
 .news-content{
 	position:relative;	
 }
@@ -688,7 +689,7 @@ ul.pgwSlider > li span, .pgwSlider > .ps-list > li span
 
 .news-blog { position: relative; max-height: 440px; }
 .news-blog .image .responsive-img{ height: 440px;}
-.news-blog .news-description {
+.news-blog .news-description-bottom {
   position: absolute;
   bottom: 0;
   width: 100%;
