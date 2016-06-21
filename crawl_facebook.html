@@ -9,10 +9,13 @@
 <body>
 
     <div id="content">
+        <div id="userInfo"></div>
         <div id="dataExtracted">
             <i class="fa fa-refresh fa-spin fa-3x fa-fw"></i>
         </div>
-        <a id="btSauce" href="#"><i class="fa fa-flask"></i> Sauce with ketchup!</a>
+        <div id="btSauceWrapper">
+            <a id="btSauce" href="wall.php"><i class="fa fa-flask"></i> Sauce with ketchup!</a>
+        </div>
     </div>
 
     <script>
@@ -20,7 +23,8 @@
          * Crawl Facebook user information.
          */
 
-        window.fbAsyncInit = function() {
+        window.fbAsyncInit = function()
+        {
             FB.init({
                 appId      : '264382306999887',
                 xfbml      : true,
@@ -29,7 +33,9 @@
 
             var access_token = window.location.hash.substring(1);
 
-            FB.api('/me?fields=about,relationship_status,gender,location,locale,interested_in,sports,inspirational_people,work,website,hometown,books,family,tagged_places,music,favorite_teams,favorite_athletes', function(response)
+            $('#btSauce').attr('href', 'wall.php?access_token=' + access_token);
+
+            FB.api('/me?fields=name,about,relationship_status,gender,location,locale,interested_in,sports,inspirational_people,work,website,hometown,books,family,tagged_places,music,favorite_teams,favorite_athletes', function(response)
             {
                 var data = {
                     gender : '',
@@ -40,6 +46,8 @@
                     likes : [],
                     musics : []
                 };
+
+                $('#userInfo').html('<div><img src="https://graph.facebook.com/me/picture?type=square&access_token=' + access_token + '" /></div><h2>' + response.name + '</h2>');
 
                 if (response.hasOwnProperty('gender'))
                 {
@@ -112,7 +120,7 @@
 
             $.each(data, function(i, item)
             {
-                html += '<tr><td>' + i + '</td><td>' + item + '</td></tr>';
+                html += '<tr><td style="color: #6BE234">' + i + '</td><td>' + item + '</td></tr>';
             });
             console.log(data);
             $('#dataExtracted').html('<table>' + html + '</table>');
@@ -131,6 +139,12 @@
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
 
     <style>
+        body
+        {
+            background: url(images/bg_blur.jpg) no-repeat;
+            background-size: cover;
+        }
+
         #btSauce
         {
             display: inline-block;
@@ -147,6 +161,50 @@
         {
             font-size: 20px;
             padding-right: 5px;
+        }
+
+        #content
+        {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        #userInfo
+        {
+            text-align: center;
+            color: white;
+            margin-top:30px;
+        }
+
+        #userInfo img
+        {
+            width: 64px;
+            height: 64px;
+            border-radius: 35px;
+            border: 2px solid white;
+            box-shadow: 0 0 1px #000;
+        }
+
+        #btSauceWrapper
+        {
+            text-align: center;
+        }
+
+        #dataExtracted
+        {
+            background: black;
+            padding: 4px;
+            color: white;
+            font-family: "Lucida Console", "Lucida Sans Typewriter", monaco, "Bitstream Vera Sans Mono", monospace;
+            font-size: 13px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 400;
+            line-height: 18.5714px;
+            border: 2px solid #eee;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            border-top: 25px solid #eee;
         }
     </style>
 
