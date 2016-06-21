@@ -18,21 +18,21 @@ function loadData(){
 function getDescription($obj){
 		$template = "";
 		if( !empty($obj['shopping'])) { 
-			$template = "<div class=\"news-content shopping\">"
+			$template = "<div class=\"shopping\">"
 						."	<div style=\"font-weight:bold;\"><i class=\"fa fa-cart-plus\"></i> Shopping</div>"
 						."	<div class=\"shop-title\">". $obj['shopping']['title'] ."</div>"
 						."	<div class=\"shop-price\">from ". $obj['shopping']['price'] ."</div>"
 						."	<div class=\"shop-buy\"><a target=\"_blank\" href=\"". $obj['shopping']['link'] ."\">Buy now</a></div>"
 						."</div>";
 		}else if( !empty($obj['event'])) { 
-			$template = "<div class=\"news-content event\">"
+			$template = "<div class=\"event\">"
 						."	<div style=\"font-weight:bold;\"><i class=\"fa fa-ticket\"></i> Event</div>"
 						."	<div class=\"event-title\">". $obj['event']['title'] ."</div>"
 						."	<div class=\"event-date\">". $obj['event']['date'] ."</div>"
 						."	<div class=\"event-buy\"><a target=\"_blank\" href=\"". $obj['event']['link'] ."\">Buy now</a></div>"
 						."</div>";
 		}else{
-			$template = "<p>".$obj['description']."</p>";
+			$template = "<p style='padding: 0 20px;'>".$obj['description']."</p>";
 		}
 		
 		echo $template;
@@ -59,23 +59,26 @@ function getRow4x4(){
                             <i class="fa fa-clock-o"></i> <?php echo $obj['time']; ?>
                         </div>
                         <div class="news-title"><a href="<?php echo $obj['link']; ?>"><?php echo $obj['title']; ?></a></div>
-                        <div class="news-content"><?php getDescription($obj); ?></div>
+				  </div>
+                        <?php getDescription($obj); ?>
                           <div>
                               <?php
-                              foreach($obj['tags'] as $tagName => $tag)
-                              {
-                                  if ($tagName === 'type')
-                                  {
-                                      echo '<span class="tag-place"><i class="fa fa-map"></i></span>';
-                                  }
-                                  else
-                                  {
-                                      echo '<span class="tag">' . $tag . '</span>';
-                                  }
-                              }
+							  if( !empty( $obj['tags'] )) {
+								  foreach($obj['tags'] as $tagName => $tag)
+								  {
+									  if ($tagName === 'type')
+									  {
+										  echo '<span class="tag-place"><i class="fa fa-map"></i></span>';
+									  }
+									  else
+									  {
+										  echo '<span class="tag">' . $tag . '</span>';
+									  }
+								  }
+							  }
                               ?>
                           </div>
-                    </div>
+                   
             </div>
         </div>
 <?php	
@@ -108,8 +111,8 @@ function getRow2x2(){
 						<?php echo $obj['time']; ?>
 					</div>
 					<div class="news-title"> <a href="<?php echo $obj['link']; ?>"><?php echo $obj['title']; ?></a></div>
-					<div class="news-content"><?php getDescription($obj); ?></div>
 				</div>
+				<?php getDescription($obj); ?>
 			</div>
 		</div>
 <?php	
@@ -163,8 +166,8 @@ function getMixRow(){
                                                 <i class="fa fa-clock-o"></i> <?php echo $obj['time']; ?>
                                             </div>
                                             <div class="news-title"><a href="<?php echo $obj['link']; ?>"><?php echo $obj['title']; ?></a></div>
-                                            <div class="news-content"><?php getDescription($obj); ?></div>
-                                        </div>
+										</div>
+										 <?php getDescription($obj); ?>
                                     </div>									
                                 </div>
                               
@@ -184,8 +187,9 @@ function getMixRow(){
                                                 <i class="fa fa-clock-o"></i> <?php echo $obj['time']; ?>
                                             </div>
                                             <div class="news-title"><a href="<?php echo $obj['link']; ?>"><?php echo $obj['title']; ?></a></div>
-                                            <div class="news-content"><?php getDescription($obj); ?></div>
-                                        </div>
+										</div>
+										<?php getDescription($obj); ?>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -204,8 +208,9 @@ function getMixRow(){
 											<i class="fa fa-clock-o"></i> <?php echo $obj['time']; ?>
 										</div>
 										<div class="news-title"><a href="<?php echo $obj['link']; ?>"><?php echo $obj['title']; ?></a></div>
-										<div class="news-content"><?php getDescription($obj); ?></div>
 									</div>
+									<?php getDescription($obj); ?>
+									
                             </div>
                         </div>
 						<?php $obj = loadData(); ?>						
@@ -222,8 +227,9 @@ function getMixRow(){
 											<i class="fa fa-clock-o"></i> <?php echo $obj['time']; ?>
 										</div>
 										<div class="news-title"><a href="<?php echo $obj['link']; ?>"><?php echo $obj['title']; ?></a></div>
-										<div class="news-content"><?php getDescription($obj); ?></div>
 									</div>
+									<?php getDescription($obj); ?>
+									
                             </div>
                         </div>
                     </div>
