@@ -7,47 +7,41 @@ $data[0]['thumbnail'] = "http://cloud.attackofthefanboy.com/wp-content/uploads/2
 $data[0]['time'] = "Today";
 $data[0]['link'] = "http://www.eurogamer.net/articles/2016-06-20-we-played-zelda-breath-of-the-wild-four-times-and-still-didnt-see-it-all";
 
-$data[1]['title'] = "Why The Legend of Zelda: Breath of the Wild was the Best Game at E3 2016";
+$data[1]['title'] = "Bayern Munich defender Mats Hummels explains why he snubbed Manchester United transfer";
 $data[1]['description'] = "One week ago, I played Zelda: Breath of the Wild and thought it was Nintendo's most ambitious game in years. It was the first game I played at this year's E3, and it ";
-$data[1]['thumbnail'] = "http://cloud.attackofthefanboy.com/wp-content/uploads/2016/02/The-Legend-of-Zelda-Wii-U.jpg?fb38c8";
+$data[1]['thumbnail'] = "http://i3.mirror.co.uk/incoming/article7759087.ece/ALTERNATES/s615/Liverpool-v-Borussia-Dortmund-UEFA-Europa-League-Quarter-Final-Second-Leg";
 $data[1]['time'] = "Today";
-$data[1]['link'] = "http://www.eurogamer.net/articles/2016-06-20-we-played-zelda-breath-of-the-wild-four-times-and-still-didnt-see-it-all";
+$data[1]['link'] = "http://www.mirror.co.uk/sport/football/news/bayern-munich-defender-mats-hummels-8243416";
 
-$data[2]['title'] = "Why The Legend of Zelda: Breath of the Wild was the Best Game at E3 2016";
+$data[2]['title'] = "Samsung Galaxy S7 vs OnePlus 3 specs comparison: Latest flagship from OnePlus 3 has outstanding hardware";
 $data[2]['description'] = "One week ago, I played Zelda: Breath of the Wild and thought it was Nintendo's most ambitious game in years. It was the first game I played at this year's E3, and it ";
-$data[2]['thumbnail'] = "http://cloud.attackofthefanboy.com/wp-content/uploads/2016/02/The-Legend-of-Zelda-Wii-U.jpg?fb38c8";
+$data[2]['thumbnail'] = "http://d.ecumenicalnews.com/full/17449/galaxy-s7-vs-oneplus-3.jpg?w=590&h=446&l=50&t=40";
 $data[2]['time'] = "Today";
-$data[2]['link'] = "http://www.eurogamer.net/articles/2016-06-20-we-played-zelda-breath-of-the-wild-four-times-and-still-didnt-see-it-all";
+$data[2]['link'] = "http://www.ecumenicalnews.com/article/samsung-galaxy-s7-vs-oneplus-3-latest-flagship-from-oneplus-3-has-outstanding-hardware/46321.htm";
 
 $data[3]['title'] = "Why The Legend of Zelda: Breath of the Wild was the Best Game at E3 2016";
 $data[3]['description'] = "One week ago, I played Zelda: Breath of the Wild and thought it was Nintendo's most ambitious game in years. It was the first game I played at this year's E3, and it ";
-$data[3]['thumbnail'] = "http://cloud.attackofthefanboy.com/wp-content/uploads/2016/02/The-Legend-of-Zelda-Wii-U.jpg?fb38c8";
-$data[3]['time'] = "Today";
-$data[3]['link'] = "http://www.eurogamer.net/articles/2016-06-20-we-played-zelda-breath-of-the-wild-four-times-and-still-didnt-see-it-all";
+$data[3]['thumbnail'] = "http://i2.walesonline.co.uk/incoming/article11498044.ece/ALTERNATES/s615/GettyImages-541075328.jpg";
+$data[3]['time'] = "Yesterday";
+$data[3]['link'] = "http://www.walesonline.co.uk/sport/rugby/leigh-halfpenny-can-write-welsh-11498370";
 
-$data[3]['title'] = "Why The Legend of Zelda: Breath of the Wild was the Best Game at E3 2016";
-$data[3]['description'] = "One week ago, I played Zelda: Breath of the Wild and thought it was Nintendo's most ambitious game in years. It was the first game I played at this year's E3, and it ";
-$data[3]['thumbnail'] = "http://cloud.attackofthefanboy.com/wp-content/uploads/2016/02/The-Legend-of-Zelda-Wii-U.jpg?fb38c8";
-$data[3]['time'] = "Today";
-$data[3]['link'] = "http://www.eurogamer.net/articles/2016-06-20-we-played-zelda-breath-of-the-wild-four-times-and-still-didnt-see-it-all";
-
-$data[4]['title'] = "Why The Legend of Zelda: Breath of the Wild was the Best Game at E3 2016";
+$data[4]['title'] = "Apple explains why it totally redesigned how the Apple Watch works";
 $data[4]['description'] = "One week ago, I played Zelda: Breath of the Wild and thought it was Nintendo's most ambitious game in years. It was the first game I played at this year's E3, and it ";
 $data[4]['thumbnail'] = "http://cloud.attackofthefanboy.com/wp-content/uploads/2016/02/The-Legend-of-Zelda-Wii-U.jpg?fb38c8";
-$data[4]['time'] = "Today";
-$data[4]['link'] = "http://www.eurogamer.net/articles/2016-06-20-we-played-zelda-breath-of-the-wild-four-times-and-still-didnt-see-it-all";
+$data[4]['time'] = "Yesterday";
+$data[4]['link'] = "http://www.businessinsider.de/apple-watchos-30-is-a-major-interface-redesign-2016-6?r=UK&IR=T";
 
-$data[5]['title'] = "Why The Legend of Zelda: Breath of the Wild was the Best Game at E3 2016";
+$data[5]['title'] = "Docker builds container orchestration right into its core Docker Engine";
 $data[5]['description'] = "One week ago, I played Zelda: Breath of the Wild and thought it was Nintendo's most ambitious game in years. It was the first game I played at this year's E3, and it ";
-$data[5]['thumbnail'] = "http://cloud.attackofthefanboy.com/wp-content/uploads/2016/02/The-Legend-of-Zelda-Wii-U.jpg?fb38c8";
-$data[5]['time'] = "Today";
-$data[5]['link'] = "http://www.eurogamer.net/articles/2016-06-20-we-played-zelda-breath-of-the-wild-four-times-and-still-didnt-see-it-all";
+$data[5]['thumbnail'] = "https://tctechcrunch2011.files.wordpress.com/2016/06/img_20160619_175158.jpg?w=738";
+$data[5]['time'] = "Yesterday";
+$data[5]['link'] = "https://techcrunch.com/2016/06/20/docker-builds-swarm-right-into-its-core-core-tools/";
 
-$data[6]['title'] = "Why The Legend of Zelda: Breath of the Wild was the Best Game at E3 2016";
+$data[6]['title'] = "Daft Punk and Jarvis Cocker have contributed to a Stanley Kubrick exhibition";
 $data[6]['description'] = "One week ago, I played Zelda: Breath of the Wild and thought it was Nintendo's most ambitious game in years. It was the first game I played at this year's E3, and it ";
-$data[6]['thumbnail'] = "http://cloud.attackofthefanboy.com/wp-content/uploads/2016/02/The-Legend-of-Zelda-Wii-U.jpg?fb38c8";
-$data[6]['time'] = "Today";
-$data[6]['link'] = "http://www.eurogamer.net/articles/2016-06-20-we-played-zelda-breath-of-the-wild-four-times-and-still-didnt-see-it-all";
+$data[6]['thumbnail'] = "http://www.mixmag.net/assets/uploads/images/_columns2/kubrick.jpg";
+$data[6]['time'] = "3 days ago";
+$data[6]['link'] = "http://www.mixmag.net/read/daft-punk-are-daydreaming-with-stanley-kubrick-at-london-exhibition-news";
 
 $data[7]['title'] = "Why The Legend of Zelda: Breath of the Wild was the Best Game at E3 2016";
 $data[7]['description'] = "One week ago, I played Zelda: Breath of the Wild and thought it was Nintendo's most ambitious game in years. It was the first game I played at this year's E3, and it ";
