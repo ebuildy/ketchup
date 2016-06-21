@@ -10,8 +10,12 @@ $currentIndex = 0;
 function loadData(){
 	global $currentIndex;
 	global $data;
+	if( $currentIndex >= count($data) ) {
+		$currentIndex = 0;
+	}
 	$object = $data[$currentIndex];	
 	$currentIndex++;
+		
 	return $object;
 }
 
