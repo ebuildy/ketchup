@@ -40,6 +40,15 @@
     right: 10px;
 }
 
+#logo
+{
+    z-index: 9;
+    position: absolute;
+    left: 50%;
+    margin-left: -150px;
+    top: 10%;
+}
+
 /*
  * ******************************************************************************
  *  jquery.mb.components

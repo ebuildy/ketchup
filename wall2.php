@@ -1,7 +1,11 @@
 <?php
 
-$places = explode(',', getParam('places', ''));
 $locale = getParam('locale', 'en_US');
+
+$parallelcurl = new ParallelCurl(3);
+
+// PLACES -------------------------------
+$places = explode(',', getParam('places', ''));
 
 $places = array_unique($places);
 
@@ -9,13 +13,39 @@ shuffle($places);
 
 $places = array_slice($places, 0, min(10, count($places)));
 
-$parallelcurl = new ParallelCurl(3);
-
 $placesData = [];
 
 foreach($places as $place)
 {
     $parallelcurl->startRequest('https://api.qwant.com/api/search/news?q=' . urlencode($place) . '&locale=' . $locale, 'on_request_done', array('q' => $place, 'type' => 'place'));
+}
+
+// LIKES -------------------------------
+$likes = explode(',', getParam('likes', ''));
+
+$likes = array_unique($likes);
+
+shuffle($likes);
+
+$likes = array_slice($likes, 0, min(6, count($likes)));
+
+foreach($likes as $place)
+{
+    $parallelcurl->startRequest('https://api.qwant.com/api/search/news?q=' . urlencode($place) . '&locale=' . $locale, 'on_request_done', array('q' => $place, 'type' => 'web'));
+}
+
+// SHOPPING ----------------------------
+$likes = explode(',', getParam('likes', ''));
+
+$likes = array_unique($likes);
+
+shuffle($likes);
+
+$likes = array_slice($likes, 0, min(6, count($likes)));
+
+foreach($likes as $place)
+{
+  //  $parallelcurl->startRequest('https://api.zanox.com/json/2011-03-01/products?connectid=43EEF0445509C7205827&items=5&q=' . urlencode($place) . '&locale=' . $locale, 'on_request_done', array('q' => $place, 'type' => 'web'));
 }
 
 function on_request_done($content, $url, $ch, $data)
@@ -49,13 +79,47 @@ foreach($placesData as $_data)
 {
     if (isset($_data->media[0]->url))
     {
+        $video = false;
+
+        foreach($_data->media as $media)
+        {
+            if ($media->type === 'video')
+            {
+                $video = true;
+
+                $data [] = [
+                    'title'         => $_data->title,
+                    'description'   => $_data->desc,
+                    'link'          => $_data->url,
+                    'time'          => 'Today',
+                    'tags'          => $_data->tags,
+                    'video_link'    => $media->url,
+                    'thumbnail'   => $_data->media[0]->url
+                ];
+            }
+        }
+
+        if (!$video)
+        {
+            $data [] = [
+                'title'       => $_data->title,
+                'description' => $_data->desc,
+                'link'        => $_data->url,
+                'time'        => 'Today',
+                'tags'        => $_data->tags,
+                'thumbnail'   => $_data->media[0]->url
+            ];
+        }
+    }
+    else
+    {
         $data [] = [
             'title'      => $_data->title,
             'description' => $_data->desc,
             'link'       => $_data->url,
             'time'       => 'Today',
             'tags'       => $_data->tags,
-            'thumbnail'  => $_data->media[0]->url
+            'thumbnail'  => ''
         ];
     }
 }

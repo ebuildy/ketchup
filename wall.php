@@ -275,25 +275,17 @@ function getMixRow(){
                 <div class="container">
                     <div class="row">
                         <div class="col l4 col m5 col s12">
-                            <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="mdi-navigation-menu"></i></a>
-                            <!-- Dropdown -->
+
 
                         </div>
                         <div class="col l4 col m3 col s12">
                             <!-- Logo -->
                             <div class="logo">
-                                <a href="index.html"><img src="images/material-logo.png" alt="Logo"></a>
+                                <a href="index.html"><img src="images/catchup.png" alt="Logo"></a>
                             </div>
                         </div>
                         <div class="col l4 col m4 col s12 pull-right">
-                            <!-- Search Button -->
-                            <form class="searchbox">
-                                <input type="text" placeholder="Type and Press Enter" name="search" class="searchbox-input" required>
-                                <input type="submit" class="searchbox-submit">
-                                <span class="searchbox-icon"><i class="mdi-action-search"></i></span>
-                            </form>
-                            <!-- LogIn Link -->
-                            <a href="javascript:" class="right login"><img class="img-avatar" src="<?php echo $avatar; ?>" /></a>
+                            <a href="javascript:" class="right pull-right login"><img class="img-avatar" src="<?php echo $avatar; ?>" /></a>
                         </div>
                     </div>
                 </div>
@@ -396,15 +388,14 @@ function getMixRow(){
         <!-- Main Wrapper -->
         <div class="wrapper">
             <div class="container">
-
-                <h1>Digital content that only matters to you</h1>
-			
 				<?php
 				getMixRow(); 
 				getRow4x4(); 
 				getRow2x2();
 				getRowUnique();
-				?>
+                getRow4x4();
+                getRow2x2();
+                ?>
             </div>
         </div>
         
