@@ -1,3 +1,17 @@
+<?php
+
+require('data.php');
+
+$currentIndex = 0;
+
+function loadData(){
+	global $currentIndex;
+	global $data;
+	$object = $data[$currentIndex];	
+	$currentIndex++;
+	return $object;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -177,40 +191,42 @@
                             <div class="z-depth-1">
                                 <!-- Horizontal News Box -->
                                 <div class="news horizontal">
+									<?php $obj = loadData(); ?>
                                     <div class="col l4 col m4 col s12 no-padding">
                                         <!-- Horizontal News Image -->
                                         <div class="news-image">
-                                            <img class="responsive-img" src="http://cloud.attackofthefanboy.com/wp-content/uploads/2016/02/The-Legend-of-Zelda-Wii-U.jpg?fb38c8" alt="news Image">
+                                            <img class="responsive-img" src="<?php echo $obj['thumbnail']; ?>" alt="news Image">
                                         </div>
                                     </div>
                                     <div class="col l8 col m8 col s12 no-padding">
                                         <!-- Horizontal News Description -->
                                         <div class="news-description">
                                             <div class="news-time">
-                                                <i class="fa fa-clock-o"></i> Today
+                                                <i class="fa fa-clock-o"></i> <?php echo $obj['time']; ?>
                                             </div>
-                                            <div class="news-title"><a href="http://www.eurogamer.net/articles/2016-06-20-we-played-zelda-breath-of-the-wild-four-times-and-still-didnt-see-it-all">Why The Legend of Zelda: Breath of the Wild was the Best Game at E3 2016</a></div>
-                                            <div class="news-content"><p>One week ago, I played Zelda: Breath of the Wild and thought it was Nintendo's most ambitious game in years. It was the first game I played at this year's E3, and it remained my personal game of the show for the rest of the week.</p></div>
+                                            <div class="news-title"><a href="<?php echo $obj['link']; ?>"><?php echo $obj['title']; ?></a></div>
+                                            <div class="news-content"><p><?php echo $obj['description']; ?></p></div>
                                         </div>
-                                    </div>
+                                    </div>									
                                 </div>
                               
                                 <!-- Horizontal News Box -->
                                 <div class="news horizontal no-border">
+									<?php $obj = loadData(); ?>
                                     <div class="col l4 col m4 col s12 no-padding">
                                         <!-- Horizontal News Image -->
                                         <div class="news-image">
-                                            <img class="responsive-img" src="http://i3.mirror.co.uk/incoming/article7759087.ece/ALTERNATES/s615/Liverpool-v-Borussia-Dortmund-UEFA-Europa-League-Quarter-Final-Second-Leg" alt="news Image">
+                                            <img class="responsive-img" src="<?php echo $obj['thumbnail']; ?>" alt="news Image">
                                         </div>
                                     </div>
                                     <div class="col l8 col m8 col s12 no-padding">
                                         <!-- Horizontal News Description -->
                                         <div class="news-description">
                                             <div class="news-time">
-                                                <i class="fa fa-clock-o"></i> 9 min ago 
+                                                <i class="fa fa-clock-o"></i> <?php echo $obj['time']; ?>
                                             </div>
-                                            <div class="news-title"><a href="javascript:void(0);"> Bayern Munich defender Mats Hummels explains why he snubbed Manchester United transfer</a></div>
-                                            <div class="news-content"><p>Bayern Munich defender Mats Hummels explains why he snubbed Manchester United transfer</p></div>
+                                            <div class="news-title"><a href="<?php echo $obj['link']; ?>"><?php echo $obj['title']; ?></a></div>
+                                            <div class="news-content"><p><?php echo $obj['description']; ?></p></div>
                                         </div>
                                     </div>
                                 </div>
@@ -219,35 +235,37 @@
                         <div class="col l3 col m6 col s12">
                             <!-- Horizontal News Box -->
                             <div class="news vertical z-depth-1">
-                                <!-- Horizontal News Image -->    
+                                <!-- Horizontal News Image -->  
+								<?php $obj = loadData(); ?>								
                                 <div class="news-image">
-                                    <img class="responsive-img" src="http://placehold.it/350x235?text=News Image" alt="news Image">
+                                    <img class="responsive-img" src="<?php echo $obj['thumbnail']; ?>" alt="news Image">
                                 </div>
                                 <!-- Horizontal News Description -->
-                                <div class="news-description">
-                                    <div class="news-time">
-                                        <i class="fa fa-clock-o"></i> 9 min ago 
-                                    </div>
-                                    <div class="news-title"><a href="javascript:void(0);"> Nam erat nulla, auctor a eros vitae, hendrerit efficitur. </a></div>
-                                    <div class="news-content"><p>et bibendum leo metus vel magna. In dapibus ac tellus non rutrum Integer. ut nisi risus.</p></div>
-                                </div>
+								  <div class="news-description">
+										<div class="news-time">
+											<i class="fa fa-clock-o"></i> <?php echo $obj['time']; ?>
+										</div>
+										<div class="news-title"><a href="<?php echo $obj['link']; ?>"><?php echo $obj['title']; ?></a></div>
+										<div class="news-content"><p><?php echo $obj['description']; ?></p></div>
+									</div>
                             </div>
                         </div>
                         <div class="col l3 col m6 col s12">
                             <!-- vertical News Box -->
                             <div class="news vertical z-depth-1">
+							<?php $obj = loadData(); ?>
                                 <!-- vertical News Image -->
                                 <div class="news-image">
-                                    <img class="responsive-img" src="http://placehold.it/350x235?text=News Image" alt="news Image">
+                                    <img class="responsive-img" src="<?php echo $obj['thumbnail']; ?>" alt="news Image">
                                 </div>
                                 <!-- vertical News Description -->
-                                <div class="news-description">
-                                    <div class="news-time">
-                                        <i class="fa fa-clock-o"></i> 9 min ago 
-                                    </div>
-                                    <div class="news-title"> <a href="javascript:void(0);"> Nam erat nulla, auctor a eros vitae, hendrerit efficitur magna. </a></div>
-                                    <div class="news-content"><p>et bibendum leo metus vel magna. In dapibus ac tellus non rutrum. Integer ut nisi risus In dapibus ac tellus non rutrum</p></div>
-                                </div>
+								  <div class="news-description">
+										<div class="news-time">
+											<i class="fa fa-clock-o"></i> <?php echo $obj['time']; ?>
+										</div>
+										<div class="news-title"><a href="<?php echo $obj['link']; ?>"><?php echo $obj['title']; ?></a></div>
+										<div class="news-content"><p><?php echo $obj['description']; ?></p></div>
+									</div>
                             </div>
                         </div>
                     </div>
