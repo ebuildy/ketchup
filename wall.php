@@ -137,7 +137,7 @@ function getRowUnique(){
 	}
 	else{
 ?>
-		<img src="<?php echo $obj['thumbnail']; ?>" style="width:100%;height:100%;"/>
+		<img src="<?php echo $obj['thumbnail']; ?>" style="width:100%;height:100%;max-height:400px;"/>
 <?php
 	}
 ?>
