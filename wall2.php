@@ -43,6 +43,8 @@ $placesData = array_slice($placesData, 0, min(20, count($placesData)));
 
 $data = [];
 
+$avatar = 'https://graph.facebook.com/' . getParam('user_id') . '/picture/square';
+
 foreach($placesData as $_data)
 {
     if (isset($_data->media[0]->url))
