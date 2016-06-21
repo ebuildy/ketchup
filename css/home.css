@@ -14,6 +14,9 @@
     margin-left: -100px;
     margin-top: -20px;
     text-decoration: none;
+	    background: linear-gradient(#4c69ba, #3b55a0);
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px 0px rgba(255,255,255,1);
 }
 
 #btFacebookLogin i
