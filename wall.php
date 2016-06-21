@@ -72,7 +72,7 @@ function getRow4x4(){
 								  {
 									  if ($tagName === 'type')
 									  {
-										  echo '<span class="tag-place"><i class="fa fa-map"></i></span>';
+										  echo '<span class="tag-place"><i class="fa fa-'.$tag.'"></i></span>';
 									  }
 								  }
 							  }
