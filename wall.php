@@ -74,10 +74,6 @@ function getRow4x4(){
 									  {
 										  echo '<span class="tag-place"><i class="fa fa-map"></i></span>';
 									  }
-									  else
-									  {
-										  echo '<span class="tag">' . $tag . '</span>';
-									  }
 								  }
 							  }
                               ?>
