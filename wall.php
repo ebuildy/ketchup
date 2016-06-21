@@ -144,13 +144,6 @@ function getDescription($obj){
                     </div>
                 </div>
             </div>
-           
-            <!-- Navigation -->
-            <nav role="navigation"  class="hide-on-small-only">
-                <div class="nav-wrapper menu-category" style="color:black;text-transform:uppercase;font-weight: bold;">
-					Digital content that matters only to you
-                </div>
-            </nav>
         </header>
         
         <!-- Sidebar Navigation -->
@@ -208,6 +201,13 @@ function getDescription($obj){
       
         <!-- Main Wrapper -->
         <div class="wrapper">
+<nav role="navigation" class="hide-on-small-only" style="
+    background: white;margin-bottom: 10px;
+">
+                <div class="nav-wrapper menu-category" style="color:black;text-transform:uppercase;font-weight: bold;">
+					Digital content that matters only to you
+                </div>
+            </nav>		
             <div class="container">
                 <section class="section">
                     <div class="row">
