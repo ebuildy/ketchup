@@ -24,7 +24,7 @@ function on_request_done($content, $url, $ch, $data)
 
     $buffer = json_decode($content);
 
-    if (!empty($buffer))
+    if (!empty($buffer) && isset($buffer->data))
     {
         $placesData = array_merge($placesData, $buffer->data->result->items);
     }
