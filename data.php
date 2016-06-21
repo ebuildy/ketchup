@@ -43,16 +43,22 @@ $data[6]['thumbnail'] = "http://www.mixmag.net/assets/uploads/images/_columns2/k
 $data[6]['time'] = "3 days ago";
 $data[6]['link'] = "http://www.mixmag.net/read/daft-punk-are-daydreaming-with-stanley-kubrick-at-london-exhibition-news";
 
-$data[7]['title'] = "Why The Legend of Zelda: Breath of the Wild was the Best Game at E3 2016";
+$data[7]['title'] = "How the Guardian online is breaking news with real-time big data analytics";
 $data[7]['description'] = "One week ago, I played Zelda: Breath of the Wild and thought it was Nintendo's most ambitious game in years. It was the first game I played at this year's E3, and it ";
-$data[7]['thumbnail'] = "http://cloud.attackofthefanboy.com/wp-content/uploads/2016/02/The-Legend-of-Zelda-Wii-U.jpg?fb38c8";
-$data[7]['time'] = "Today";
-$data[7]['link'] = "http://www.eurogamer.net/articles/2016-06-20-we-played-zelda-breath-of-the-wild-four-times-and-still-didnt-see-it-all";
+$data[7]['thumbnail'] = "http://www.cbronline.com/BRHome/ResizeImage/_Uploads_NewsArticle_4922632_main.JPG/1440/828/Details/0/0";
+$data[7]['time'] = "5 days ago";
+$data[7]['link'] = "http://www.cbronline.com/news/big-data/analytics/exclusive-how-the-guardian-online-is-breaking-news-with-real-time-big-data-analytics-4922632";
 
-$data[8]['title'] = "Why The Legend of Zelda: Breath of the Wild was the Best Game at E3 2016";
+$data[8]['title'] = "Lille : l'ISEN fabrique une main en exosquelette imprimable en 3D";
 $data[8]['description'] = "One week ago, I played Zelda: Breath of the Wild and thought it was Nintendo's most ambitious game in years. It was the first game I played at this year's E3, and it ";
-$data[8]['thumbnail'] = "http://cloud.attackofthefanboy.com/wp-content/uploads/2016/02/The-Legend-of-Zelda-Wii-U.jpg?fb38c8";
-$data[8]['time'] = "Today";
-$data[8]['link'] = "http://www.eurogamer.net/articles/2016-06-20-we-played-zelda-breath-of-the-wild-four-times-and-still-didnt-see-it-all";
+$data[8]['thumbnail'] = "http://ne.rosselcdn.net/sites/default/files/imagecache/vdn_photo_principale_article/articles/ophotos/20160518/884079216_bc85f78e4f33f57e4b28affb55eef3c8_79214409_B978690956Z.1_20160518182242_000_GTU6QAIHG.1-0.jpg";
+$data[8]['time'] = "1 week ago";
+$data[8]['link'] = "http://www.nordeclair.fr/info-locale/lille-l-isen-fabrique-une-main-en-exosquelette-imprimable-en-3d-jna49b0n1133793";
+
+$data[9]['title'] = "Qwant Music : un moteur de recherche spécialisé en musique";
+$data[9]['description'] = "One week ago, I played Zelda: Breath of the Wild and thought it was Nintendo's most ambitious game in years. It was the first game I played at this year's E3, and it ";
+$data[9]['thumbnail'] = "http://fr.cdn.v5.futura-sciences.com/builds/images/thumbs/a/aae8a0799f_qwantMusic_logo.jpg";
+$data[9]['time'] = "1 week ago";
+$data[9]['link'] = "http://www.futura-sciences.com/magazines/high-tech/infos/actu/d/internet-qwant-music-moteur-recherche-specialise-musique-63116/";
 
 ?>
