@@ -108,6 +108,7 @@ a:focus { outline: none; }
 .wrapper{
   position: relative;
   margin-top:150px;
+    background: #eee;
 }
 .wrapper.margin-top {
   display: inline-block;
@@ -1926,4 +1927,9 @@ nav ul a{ padding-left: 15px !important; padding-right: 15px !important; font-si
     border: 2px solid white;
     box-shadow: 0 0 1px #000;
     margin-top: 33px;
+}
+
+html, body
+{
+    background: #3f51b5;
 }
