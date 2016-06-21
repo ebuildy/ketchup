@@ -27,7 +27,7 @@ $data[3]['link'] = "http://www.walesonline.co.uk/sport/rugby/leigh-halfpenny-can
 
 $data[4]['title'] = "<b>Apple</b> explains why it totally redesigned how the <b>Apple</b> Watch works";
 $data[4]['description'] = "Users will receive a free update to WatchOS 3 this fall, which is essentially a wholesale redesign of the <b>Apple</b> Watch interface";
-$data[4]['thumbnail'] = "http://cloud.attackofthefanboy.com/wp-content/uploads/2016/02/The-Legend-of-Zelda-Wii-U.jpg?fb38c8";
+$data[4]['thumbnail'] = "http://cdn1.macworld.co.uk/cmsdata/features/3606039/apple_watch_2_wish_list_thumb800.jpg";
 $data[4]['time'] = "Yesterday";
 $data[4]['link'] = "http://www.businessinsider.de/apple-watchos-30-is-a-major-interface-redesign-2016-6?r=UK&IR=T";
 
