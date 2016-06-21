@@ -1,7 +1,9 @@
+var datas = [];
+
 $(function()
 {
     js_height_full();
-
+	
     $('.player').each(function(){
         $(this).height($("#header_video").height() );
         if( $(this).attr('data-background') ){
