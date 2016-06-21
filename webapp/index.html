@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ketchup</title>
+    <link rel="stylesheet" href="./bower_components/components-font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./css/home.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+
+    <div class="slide-home bz-video-bg">
+        <div id="header_video">
+            <div id="P2" class="player video-container" data-property="{videoURL:'https://www.youtube.com/watch?v=06bw1ujCkpc',containment:'#header_video',autoPlay:true, mute:true, startAt:15, opacity:1,showControls:false}" data-background="assets/images/video-bg.jpg" data-background-fallback="assets/images/video-bg-fallback.jpg">
+            </div>
+        </div>
+        <div class="full-height">
+            <div class="content-slide text-center">
+                <a id="btFacebookLogin" href="#" onclick="login(); return false;"><i class="fa fa-facebook-square"></i> Continue with Facebook</a>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div id="facebookShare"
+            class="fb-like"
+            data-share="true"
+            data-width="450"
+            data-show-faces="true">
+    </div>
+
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId      : '264382306999887',
+                xfbml      : true,
+                version    : 'v2.6'
+            });
+        };
+
+        (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+        function login()
+        {
+            FB.login(function(response)
+            {
+                if (response.hasOwnProperty('status'))
+                {
+                    if (response.status === 'connected')
+                    {
+                        window.location = 'crawl_facebook.html#' + (response.authResponse.accessToken);
+                    }
+                }
+
+            }, "public_profile,user_games_activity,user_hometown,user_likes,user_location,user_events,user_actions.books,user_posts,user_actions.fitness,user_actions.music,user_actions.news,user_actions.video");
+        }
+    </script>
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="js/jquery.ytplayer.js"></script>
+    <script src="js/home.js"></script>
+
+</body>
+</html>

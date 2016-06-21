@@ -1,0 +1,22 @@
+{
+  "name": "ketchup",
+  "authors": [
+    "t.decaux <t.decaux@qwant.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "http://catchup.ovh",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "components-font-awesome": "^4.6.3",
+    "jquery": "^3.0.0"
+  }
+}
