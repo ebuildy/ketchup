@@ -72,4 +72,5 @@ $data[9]['thumbnail'] = "http://fr.cdn.v5.futura-sciences.com/builds/images/thum
 $data[9]['time'] = "1 week ago";
 $data[9]['link'] = "http://www.futura-sciences.com/magazines/high-tech/infos/actu/d/internet-qwant-music-moteur-recherche-specialise-musique-63116/";
 
+$data[10]['video_link'] = "https://www.youtube.com/embed/GDpmVUEjagg";
 ?>

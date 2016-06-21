@@ -35,6 +35,184 @@ function getDescription($obj){
 		echo $template;
 	
 }
+
+function getRow4x4(){
+?>
+	<div class="row">
+<?php
+	for( $i = 0 ; $i < 4 ; $i++){
+		$obj = loadData();
+?>
+
+                    <div class="col l3 col m6 col s12">
+                        <!-- vertical News Box -->
+                        <div class="news vertical z-depth-1">
+                            <!-- vertical News Image -->
+                                <div class="news-image">
+                                    <img class="responsive-img" src="<?php echo $obj['thumbnail']; ?>" alt="news Image">
+                                </div>
+                                <!-- vertical News Description -->
+								  <div class="news-description">
+										<div class="news-time">
+											<i class="fa fa-clock-o"></i> <?php echo $obj['time']; ?>
+										</div>
+										<div class="news-title"><a href="<?php echo $obj['link']; ?>"><?php echo $obj['title']; ?></a></div>
+										<div class="news-content"><?php getDescription($obj); ?></div>
+									</div>
+                        </div>
+                    </div>
+<?php	
+	}
+?>
+	</div>
+<?php
+}
+
+function getRow2x2(){
+?>
+	<div class="row">
+<?php
+	for($i = 0 ; $i < 2 ; $i++) {
+		$obj = loadData();
+?>
+		<div class="col l6 col m6 col s12">
+			<!-- News Blog Box -->
+			<div class="news-blog z-depth-1">
+				<!-- News Blog Image -->
+				<div class="image">
+					<img class="responsive-img" src="<?php echo $obj['thumbnail']; ?>" alt="news Image">
+				</div>
+				<!-- News Blog Category -->
+				
+				<!-- News Blog Description -->
+				
+				<div class="news-description">
+					<div class="news-time">
+						<?php echo $obj['time']; ?>
+					</div>
+					<div class="news-title"> <a href="<?php echo $obj['link']; ?>"><?php echo $obj['title']; ?></a></div>
+					<div class="news-content"><?php getDescription($obj); ?></div>
+				</div>
+			</div>
+		</div>
+<?php	
+	}
+?>
+	</div>
+<?php
+}
+
+function getRowUnique(){
+	$obj = loadData();
+?>
+	<div class="row">
+		<div class="col l12 col m12 col s12">
+<?php
+	if( !empty($obj['video_link'] ) ){
+?>
+		
+			<iframe src="<?php echo $obj['video_link']; ?>" style="width:100%;height:500px;" frameborder="0" allowfullscreen></iframe>
+<?php 
+	}
+	else{
+?>
+		<img src="<?php echo $obj['thumbnail']; ?>" style="width:100%;height:100%;"/>
+<?php
+	}
+?>
+		</div>
+	</div>
+<?php
+}
+
+function getMixRow(){
+?>
+	    <div class="row">
+                        <div class="col l6 col m12 col s12">
+                            <div class="z-depth-1">
+								<?php $obj = loadData(); ?>
+                                <!-- Horizontal News Box -->
+                                <div class="news horizontal">
+                                    <div class="col l4 col m4 col s12 no-padding">
+                                        <!-- Horizontal News Image -->
+                                        <div class="news-image">
+                                            <img class="responsive-img" src="<?php echo $obj['thumbnail']; ?>" alt="news Image">
+                                        </div>
+                                    </div>
+                                    <div class="col l8 col m8 col s12 no-padding">
+                                        <!-- Horizontal News Description -->
+                                        <div class="news-description">
+                                            <div class="news-time">
+                                                <i class="fa fa-clock-o"></i> <?php echo $obj['time']; ?>
+                                            </div>
+                                            <div class="news-title"><a href="<?php echo $obj['link']; ?>"><?php echo $obj['title']; ?></a></div>
+                                            <div class="news-content"><?php getDescription($obj); ?></div>
+                                        </div>
+                                    </div>									
+                                </div>
+                              
+                                <!-- Horizontal News Box -->
+									<?php $obj = loadData(); ?>								
+                                <div class="news horizontal no-border">
+                                    <div class="col l4 col m4 col s12 no-padding">
+                                        <!-- Horizontal News Image -->
+                                        <div class="news-image">
+                                            <img class="responsive-img" src="<?php echo $obj['thumbnail']; ?>" alt="news Image">
+                                        </div>
+                                    </div>
+                                    <div class="col l8 col m8 col s12 no-padding">
+                                        <!-- Horizontal News Description -->
+                                        <div class="news-description">
+                                            <div class="news-time">
+                                                <i class="fa fa-clock-o"></i> <?php echo $obj['time']; ?>
+                                            </div>
+                                            <div class="news-title"><a href="<?php echo $obj['link']; ?>"><?php echo $obj['title']; ?></a></div>
+                                            <div class="news-content"><?php getDescription($obj); ?></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<?php $obj = loadData(); ?>
+                        <div class="col l3 col m6 col s12">
+                            <!-- Horizontal News Box -->
+                            <div class="news vertical z-depth-1">
+                                <!-- Horizontal News Image -->  							
+                                <div class="news-image">
+                                    <img class="responsive-img" src="<?php echo $obj['thumbnail']; ?>" alt="news Image">
+                                </div>
+                                <!-- Horizontal News Description -->
+								  <div class="news-description">
+										<div class="news-time">
+											<i class="fa fa-clock-o"></i> <?php echo $obj['time']; ?>
+										</div>
+										<div class="news-title"><a href="<?php echo $obj['link']; ?>"><?php echo $obj['title']; ?></a></div>
+										<div class="news-content"><?php getDescription($obj); ?></div>
+									</div>
+                            </div>
+                        </div>
+						<?php $obj = loadData(); ?>						
+                        <div class="col l3 col m6 col s12">
+                            <!-- vertical News Box -->
+                            <div class="news vertical z-depth-1">
+                                <!-- vertical News Image -->
+                                <div class="news-image">
+                                    <img class="responsive-img" src="<?php echo $obj['thumbnail']; ?>" alt="news Image">
+                                </div>
+                                <!-- vertical News Description -->
+								  <div class="news-description">
+										<div class="news-time">
+											<i class="fa fa-clock-o"></i> <?php echo $obj['time']; ?>
+										</div>
+										<div class="news-title"><a href="<?php echo $obj['link']; ?>"><?php echo $obj['title']; ?></a></div>
+										<div class="news-content"><?php getDescription($obj); ?></div>
+									</div>
+                            </div>
+                        </div>
+                    </div>
+<?php
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -209,225 +387,14 @@ function getDescription($obj){
                 </div>
             </nav>		
             <div class="container">
-                <section class="section">
-                    <div class="row">
-                        <div class="col l6 col m12 col s12">
-                            <div class="z-depth-1">
-                                <!-- Horizontal News Box -->
-                                <div class="news horizontal">
-									<?php $obj = loadData(); ?>
-                                    <div class="col l4 col m4 col s12 no-padding">
-                                        <!-- Horizontal News Image -->
-                                        <div class="news-image">
-                                            <img class="responsive-img" src="<?php echo $obj['thumbnail']; ?>" alt="news Image">
-                                        </div>
-                                    </div>
-                                    <div class="col l8 col m8 col s12 no-padding">
-                                        <!-- Horizontal News Description -->
-                                        <div class="news-description">
-                                            <div class="news-time">
-                                                <i class="fa fa-clock-o"></i> <?php echo $obj['time']; ?>
-                                            </div>
-                                            <div class="news-title"><a href="<?php echo $obj['link']; ?>"><?php echo $obj['title']; ?></a></div>
-                                            <div class="news-content"><?php getDescription($obj); ?></div>
-                                        </div>
-                                    </div>									
-                                </div>
-                              
-                                <!-- Horizontal News Box -->
-                                <div class="news horizontal no-border">
-									<?php $obj = loadData(); ?>
-                                    <div class="col l4 col m4 col s12 no-padding">
-                                        <!-- Horizontal News Image -->
-                                        <div class="news-image">
-                                            <img class="responsive-img" src="<?php echo $obj['thumbnail']; ?>" alt="news Image">
-                                        </div>
-                                    </div>
-                                    <div class="col l8 col m8 col s12 no-padding">
-                                        <!-- Horizontal News Description -->
-                                        <div class="news-description">
-                                            <div class="news-time">
-                                                <i class="fa fa-clock-o"></i> <?php echo $obj['time']; ?>
-                                            </div>
-                                            <div class="news-title"><a href="<?php echo $obj['link']; ?>"><?php echo $obj['title']; ?></a></div>
-                                            <div class="news-content"><?php getDescription($obj); ?></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col l3 col m6 col s12">
-                            <!-- Horizontal News Box -->
-                            <div class="news vertical z-depth-1">
-                                <!-- Horizontal News Image -->  
-								<?php $obj = loadData(); ?>								
-                                <div class="news-image">
-                                    <img class="responsive-img" src="<?php echo $obj['thumbnail']; ?>" alt="news Image">
-                                </div>
-                                <!-- Horizontal News Description -->
-								  <div class="news-description">
-										<div class="news-time">
-											<i class="fa fa-clock-o"></i> <?php echo $obj['time']; ?>
-										</div>
-										<div class="news-title"><a href="<?php echo $obj['link']; ?>"><?php echo $obj['title']; ?></a></div>
-										<div class="news-content"><?php getDescription($obj); ?></div>
-									</div>
-                            </div>
-                        </div>
-                        <div class="col l3 col m6 col s12">
-                            <!-- vertical News Box -->
-                            <div class="news vertical z-depth-1">
-							<?php $obj = loadData(); ?>
-                                <!-- vertical News Image -->
-                                <div class="news-image">
-                                    <img class="responsive-img" src="<?php echo $obj['thumbnail']; ?>" alt="news Image">
-                                </div>
-                                <!-- vertical News Description -->
-								  <div class="news-description">
-										<div class="news-time">
-											<i class="fa fa-clock-o"></i> <?php echo $obj['time']; ?>
-										</div>
-										<div class="news-title"><a href="<?php echo $obj['link']; ?>"><?php echo $obj['title']; ?></a></div>
-										<div class="news-content"><?php getDescription($obj); ?></div>
-									</div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                  
-                <div class="row">
-                    <div class="col l3 col m6 col s12">
-                        <!-- vertical News Box -->
-                        <div class="news vertical z-depth-1">
-                            <!-- vertical News Image -->
-							<?php $obj = loadData(); ?>
-                                <div class="news-image">
-                                    <img class="responsive-img" src="<?php echo $obj['thumbnail']; ?>" alt="news Image">
-                                </div>
-                                <!-- vertical News Description -->
-								  <div class="news-description">
-										<div class="news-time">
-											<i class="fa fa-clock-o"></i> <?php echo $obj['time']; ?>
-										</div>
-										<div class="news-title"><a href="<?php echo $obj['link']; ?>"><?php echo $obj['title']; ?></a></div>
-										<div class="news-content"><?php getDescription($obj); ?></div>
-									</div>
-                        </div>
-                    </div>
-                    <div class="col l3 col m6 col s12">
-                        <!-- vertical News Box -->
-                        <div class="news vertical z-depth-1">
-                            <!-- vertical News Image -->
-							<?php $obj = loadData(); ?>
-							
-                                <div class="news-image">
-                                    <img class="responsive-img" src="<?php echo $obj['thumbnail']; ?>" alt="news Image">
-                                </div>
-                                <!-- vertical News Description -->
-								  <div class="news-description">
-										<div class="news-time">
-											<i class="fa fa-clock-o"></i> <?php echo $obj['time']; ?>
-										</div>
-										<div class="news-title"><a href="<?php echo $obj['link']; ?>"><?php echo $obj['title']; ?></a></div>
-										<div class="news-content"><?php getDescription($obj); ?></div>
-									</div>
-                        </div>
-                    </div>
-                    <div class="col l3 col m6 col s12">
-                        <!-- vertical News Box -->
-                        <div class="news vertical z-depth-1">
-                            <!-- vertical News Image -->
-							<?php $obj = loadData(); ?>
-
-                                <div class="news-image">
-                                    <img class="responsive-img" src="<?php echo $obj['thumbnail']; ?>" alt="news Image">
-                                </div>
-                                <!-- vertical News Description -->
-								  <div class="news-description">
-										<div class="news-time">
-											<i class="fa fa-clock-o"></i> <?php echo $obj['time']; ?>
-										</div>
-										<div class="news-title"><a href="<?php echo $obj['link']; ?>"><?php echo $obj['title']; ?></a></div>
-										<div class="news-content"><?php getDescription($obj); ?></div>
-									</div>
-                        </div>
-                    </div>
-                    <div class="col l3 col m6 col s12">
-                        <!-- vertical News Box -->
-                        <div class="news vertical z-depth-1">
-                            <!-- vertical News Image -->
-							<?php $obj = loadData(); ?>
-                                <div class="news-image">
-                                    <img class="responsive-img" src="<?php echo $obj['thumbnail']; ?>" alt="news Image">
-                                </div>
-                                <!-- vertical News Description -->
-								  <div class="news-description">
-										<div class="news-time">
-											<i class="fa fa-clock-o"></i> <?php echo $obj['time']; ?>
-										</div>
-										<div class="news-title"><a href="<?php echo $obj['link']; ?>"><?php echo $obj['title']; ?></a></div>
-										<div class="news-content"><?php getDescription($obj); ?></div>
-									</div>
-                        </div>
-                    </div>
-                </div>
+			
+				<?php
+				getMixRow(); 
+				getRow4x4(); 
+				getRow2x2();
+				getRowUnique();
+				?>
               
-                <div class="row">
-                   <div class="col l6 col m6 col s12">
-                        <!-- News Blog Box -->
-                        <div class="news-blog z-depth-1">
-                            <!-- News Blog Image -->
-							<?php $obj = loadData(); ?>
-                            
-                            <div class="image">
-                                <img class="responsive-img" src="<?php echo $obj['thumbnail']; ?>" alt="news Image">
-                            </div>
-                            <!-- News Blog Category -->
-                            
-                            <!-- News Blog Description -->
-							
-                            <div class="news-description">
-                                <div class="news-time">
-                                    <?php echo $obj['time']; ?>
-                                </div>
-                                <div class="news-title"> <a href="<?php echo $obj['link']; ?>"><?php echo $obj['title']; ?></a></div>
-                                <div class="news-content"><?php getDescription($obj); ?></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col l6 col m6 col s12">
-                        <!-- News Blog Box -->
-                        <div class="news-blog z-depth-1">
-                            <!-- News Blog Image -->
-							<?php $obj = loadData(); ?>
-                            
-                            <div class="image">
-                                <img class="responsive-img" src="<?php echo $obj['thumbnail']; ?>" alt="news Image">
-                            </div>
-                            <!-- News Blog Category -->
-                            
-                            <!-- News Blog Description -->
-							
-                            <div class="news-description">
-                                <div class="news-time">
-                                    <?php echo $obj['time']; ?>
-                                </div>
-                                <div class="news-title"> <a href="<?php echo $obj['link']; ?>"><?php echo $obj['title']; ?></a></div>
-                                <div class="news-content"><?php getDescription($obj); ?></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-              
-                <section class="section">
-                    <div class="row">
-                        <div class="col l12 col m12 col s12">
-                            <iframe src="https://www.youtube.com/embed/GDpmVUEjagg" style="width:100%;height:500px;" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </section>
-
-                
             </div>
         </div>
         
