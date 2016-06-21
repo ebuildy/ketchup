@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <title>Material News - Brand </title>
+
+    <!-- Materialize CSS  -->
+    <link href="css/materialize.css" type="text/css" rel="stylesheet">
+  
+    <!-- Custom Css -->
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    
+    <!-- Font Awesome Css -->
+    <link href="css/font-awesome.min.css" type="text/css" rel="stylesheet">
+    
+    <!-- Slider Css -->
+    <link href="css/pgwslider.css" type="text/css" rel="stylesheet">
+    <link rel='stylesheet' id='camera-css'  href='css/camera.css' type='text/css' media='all'>
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+   
+</head>
+    <body>
+        <!-- Header -->
+        <header>
+            <!-- Header Top Display In large and Tablet Device -->
+            <div class="header-top hide-on-small-only">
+                <div class="container">
+                    <div class="row">
+                        <div class="col l4 col m5 col s12">
+                            <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="mdi-navigation-menu"></i></a>
+                            <!-- Dropdown -->
+                            <div class="header-dropdown">
+                                <!-- Dropdown Trigger -->
+                                <a class='dropdown-button btn' data-beloworigin="true" href='#' data-activates='dropdown'>Today <i class="mdi-navigation-arrow-drop-down"></i></a>
+                                <!-- Dropdown Structure -->
+                                <ul id='dropdown' class='dropdown-content'>
+                                  <li><a href="javascript:void(0);">Today</a></li>
+                                  <li><a href="javascript:void(0);">Yesterday</a></li>
+                                  <li><a href="javascript:void(0);">1 Week</a></li>
+                                  <li><a href="javascript:void(0);">1 Month</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col l4 col m3 col s12">
+                            <!-- Logo -->
+                            <div class="logo">
+                                <a href="index.html"><img src="images/material-logo.png" alt="Logo"></a>
+                            </div>
+                        </div>
+                        <div class="col l4 col m4 col s12 pull-right">
+                            <!-- Search Button -->
+                            <form class="searchbox">
+                                <input type="text" placeholder="Type and Press Enter" name="search" class="searchbox-input" required>
+                                <input type="submit" class="searchbox-submit">
+                                <span class="searchbox-icon"><i class="mdi-action-search"></i></span>
+                            </form>
+                            <!-- LogIn Link -->
+                            <a href="login.html" class="right login">Login</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Header top Display On Mobile -->
+            <div class="header hide-on-med-and-up">
+                <div class="top-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col l4 col m5 col s2">
+                                <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="mdi-navigation-menu"></i></a>
+                            </div>
+                            <div class="col l4 col m4 col s5">    
+                                <!-- Dropdown -->
+                                <div class="header-dropdown">
+                                    <!-- Dropdown Trigger -->
+                                    <a class='dropdown-button btn' data-beloworigin="true" href='#' data-activates='dropdown-mobile'>Today <i class="mdi-navigation-arrow-drop-down"></i></a>
+                                    <!-- Dropdown Structure -->
+                                    <ul id='dropdown-mobile' class='dropdown-content'>
+                                      <li><a href="javascript:void(0);">Today</a></li>
+                                      <li><a href="javascript:void(0);">Yesterday</a></li>
+                                      <li><a href="javascript:void(0);">1 Week</a></li>
+                                      <li><a href="javascript:void(0);">1 Month</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col l4 col m4 col s3">
+                                <!-- LogIn Link -->
+                                <a href="login.html" class="login">Login</a>
+                            </div>
+                            <div class="col l4 col m4 col s2">
+                            <!-- Search Button -->
+                                <form class="searchbox">
+                                    <input type="text" placeholder="Type and Press Enter" name="search" class="searchbox-input" required>
+                                    <input type="submit" class="searchbox-submit">
+                                    <span class="searchbox-icon"><i class="mdi-action-search"></i></span>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col l4 col m4 col s12">
+                                <!-- Logo -->
+                                <div class="logo">
+                                    <a href="index.html"><img src="images/material-logo.png" alt="Logo"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            <!-- Navigation -->
+            <nav role="navigation"  class="hide-on-small-only">
+                <div class="nav-wrapper menu-category">
+                    <ul>
+                        <li>
+                            <ul class="news-category-dropdown">
+                                <li><a href="javascript:void(0);">Home Page <i class="fa fa-angle-down"></i></a>
+                                    <ul>
+                                        <li><a href="index.html">Home Page 1</a></li>
+                                        <li><a href="index2.html">Home Page 2</a></li>
+                                        <li><a href="index3.html">Home Page 3</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul class="news-category-dropdown">
+                                <li><a href="javascript:void(0);">News Detail <i class="fa fa-angle-down"></i></a>
+                                    <ul>
+                                        <li><a href="news-single1.html">News Detail 1</a></li>
+                                        <li><a href="news-single2.html">News Detail 2</a></li>
+                                        <li><a href="news-single3.html">News Detail 3</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul class="news-category-dropdown">
+                                <li><a href="javascript:void(0);">Category <i class="fa fa-angle-down"></i></a>
+                                    <ul>
+                                        <li><a href="index-sport.html">Sports</a></li>
+                                        <li><a href="index-life.html">Life</a></li>
+                                        <li><a href="index-travel.html">Travel</a></li>
+                                        <li><a href="index-money.html">Money</a></li>
+                                        <li><a href="index-tech.html">Tech</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul class="news-category-dropdown">
+                                <li><a href="javascript:void(0);">pages<i class="fa fa-angle-down"></i></a>
+                                    <ul>
+                                        <li><a href="profile.html">Profile</a></li>
+                                        <li><a href="brand1.html">Brand Style 1</a></li>
+                                        <li class="active"><a href="brand2.html">Brand Style 2</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul class="news-category-dropdown">
+                                <li><a href="javascript:void(0);">Shop <i class="fa fa-angle-down"></i></a>
+                                    <ul>
+                                        <li><a href="shop.html">Shop Page</a></li>
+                                        <li><a href="catalog.html">Catalog</a></li>
+                                        <li><a href="product-detail.html">Product Detail</a></li>
+                                        <li><a href="shopping-cart.html">Shopping Cart</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="about.html">About</a></li>
+                        <li>
+                            <ul class="news-category-dropdown">
+                                  <li><a href="javascript:void(0);">Contact <i class="fa fa-angle-down"></i></a>
+                                      <ul>
+                                          <li><a href="contact1.html">Contact Style 1</a></li>
+                                          <li><a href="contact2.html">Contact Style 2</a></li>
+                                      </ul>
+                                  </li>
+                            </ul>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        
+        <!-- Sidebar Navigation -->
+        <ul id="slide-out" class="side-nav full">
+            <li class="logo-title"><a href="javascript:void(0);">Material News</a></li>
+            <!-- Dropdown Menu -->
+            <li class="dropdown-menu">
+                <ul class="collapsible" data-collapsible="expandable">
+                    <li class="">
+                        <div class="collapsible-header waves-effect waves"><i class="fa fa-file"></i> Home Page <i class="fa fa-angle-right"></i></div>
+                        <div style="display: none;" class="collapsible-body">
+                            <ul>
+                                <li class="waves-effect"><a href="index.html"><i class="fa fa-angle-right"></i> Home Page 1</a></li>
+                                <li class="waves-effect"><a href="index2.html"><i class="fa fa-angle-right"></i> Home Page 2</a></li>
+                                <li class="waves-effect"><a href="index3.html"><i class="fa fa-angle-right"></i> Home Page 3</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="">
+                        <div class="collapsible-header waves-effect waves"><i class="fa fa-file-text"></i> News Detail<i class="fa fa-angle-right"></i></div>
+                        <div style="display: none;" class="collapsible-body">
+                            <ul>
+                                <li class="waves-effect"><a href="news-single1.html"><i class="fa fa-angle-right"></i> News Detail 1</a></li>
+                                <li class="waves-effect"><a href="news-single2.html"><i class="fa fa-angle-right"></i> News Detail 2</a></li>
+                                <li class="waves-effect"><a href="news-single3.html"><i class="fa fa-angle-right"></i> News Detail 3</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="">
+                        <div class="collapsible-header waves-effect waves"><i class="fa fa-file-text"></i> Category <i class="fa fa-angle-right"></i></div>
+                        <div style="display: none;" class="collapsible-body">
+                            <ul>
+                                <li class="waves-effect"><a href="index-sport.html"><i class="fa fa-angle-right"></i> Sport </a></li>
+                                <li class="waves-effect"><a href="index-life.html"><i class="fa fa-angle-right"></i> Life </a></li>
+                                <li class="waves-effect"><a href="index-travel.html"><i class="fa fa-angle-right"></i> Travel </a></li>
+                                <li class="waves-effect"><a href="index-money.html"><i class="fa fa-angle-right"></i> Money </a></li>
+                                <li class="waves-effect"><a href="index-tech.html"><i class="fa fa-angle-right"></i> Tech  </a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li class="waves-effect"><a href="shop.html"><i class="fa fa-tag"></i>Shop</a></li>
+            <li class="waves-effect"><a href="catalog.html"><i class="fa fa-briefcase"></i>Catalog</a></li>
+            <li class="waves-effect"><a href="product-detail.html"><i class="fa fa-plus-square"></i>product Detail</a></li>
+            <li class="waves-effect"><a href="shopping-cart.html"><i class="fa fa-shopping-cart"></i>Shopping Cart</a></li>
+            <li class="waves-effect"><a href="profile.html"><i class="fa fa-user"></i>Profile</a></li>
+            <li class="waves-effect"><a href="brand1.html"><i class="fa fa-rocket"></i>Brand Style 1</a></li>
+            <li class="waves-effect active"><a href="brand2.html"><i class="fa fa-plane"></i>Brand Style 2</a></li>
+            <li class="waves-effect"><a href="about.html"><i class="fa fa-users"></i>About</a></li>
+            <li class="waves-effect"><a href="contact1.html"><i class="fa fa-phone"></i>Contact Style 1</a></li>
+            <li class="waves-effect"><a href="contact2.html"><i class="fa fa-map-marker"></i>Contact Style 2</a></li>
+            <li class="waves-effect"><a href="login.html"><i class="fa fa-lock"></i>Login</a></li>
+        </ul>
+      
+        <!-- Main Wrapper -->
+        <div class="wrapper grey-background">
+            <div class="container">
+                <div class="row">
+                    <div class="col l12 col m12 col s12 center-align">
+                        <!-- Breadcrumb -->
+                        <div class="breadcrumb">
+                            <a href="#">Home</a> <i class="fa fa-angle-right"></i> Brands 
+                            <div class="page-title"> Brands </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col l12 col m12 col s12">
+                        <div class="brand style-2 z-depth-1">
+                            <div class="brand-box">
+                                <div class="col l3 col m3 col s12">
+                                    <div class="brand-category">a</div>
+                                    <div class="brands">
+                                        <a href="javascript:void(0);">Acqua DI Parma</a>
+                                        <a href="javascript:void(0);">Agave</a>
+                                        <a href="javascript:void(0);">Algenist</a>
+                                        <a href="javascript:void(0);">ALTERNA</a>
+                                        <a href="javascript:void(0);">Amazing Cosmatic</a>
+                                        <a href="javascript:void(0);">Amika</a>
+                                        <a href="javascript:void(0);">Amorepacific</a>
+                                        <a href="javascript:void(0);">Ananstia Beverly Hills</a>
+                                        <a href="javascript:void(0);">Anna sui</a>
+                                        <a href="javascript:void(0);">Apivita</a>
+                                    </div>
+                                </div>
+                                <div class="col l3 col m3 col s12">
+                                    <div class="brand-category">b</div>
+                                    <div class="brands">
+                                        <a href="javascript:void(0);">BALENCIAGA</a>
+                                        <a href="javascript:void(0);">Balmshell</a>
+                                        <a href="javascript:void(0);">Bareminerals</a>
+                                        <a href="javascript:void(0);">BECCA</a>
+                                        <a href="javascript:void(0);">Bnc</a>
+                                        <a href="javascript:void(0);">Bliss</a>
+                                    </div>
+                                </div>
+                                <div class="col l3 col m3 col s12">
+                                    <div class="brand-category">c</div>
+                                    <div class="brands">
+                                        <a href="javascript:void(0);">Calista Tools</a>
+                                        <a href="javascript:void(0);">Calvin Clein</a>
+                                        <a href="javascript:void(0);">Algenist</a>
+                                        <a href="javascript:void(0);">Cartier</a>
+                                        <a href="javascript:void(0);">Caudalie</a>
+                                        <a href="javascript:void(0);">CHANEl</a>
+                                        <a href="javascript:void(0);">Chloe</a>
+                                    </div>
+                                </div>
+                                <div class="col l3 col m3 col s12">
+                                    <div class="brand-category">d</div>
+                                    <div class="brands">
+                                        <a href="javascript:void(0);">D&copy;G</a>
+                                        <a href="javascript:void(0);">DDF</a>
+                                        <a href="javascript:void(0);">Dior</a>
+                                        <a href="javascript:void(0);">Diesel</a>
+                                        <a href="javascript:void(0);">DevaCurl</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="border"></div>
+                            
+                            <div class="brand-box">
+                                <div class="col l3 col m3 col s12">
+                                    <div class="brand-category">e</div>
+                                    <div class="brands">
+                                        <a href="javascript:void(0);">EDWARD BEES</a>
+                                        <a href="javascript:void(0);">ELLIS FAAS</a>
+                                        <a href="javascript:void(0);">Escada</a>
+                                        <a href="javascript:void(0);">Evian</a>
+                                    </div>
+                                </div>
+                                <div class="col l3 col m3 col s12">
+                                    <div class="brand-category">f</div>
+                                    <div class="brands">
+                                        <a href="javascript:void(0);">Fendi</a>
+                                        <a href="javascript:void(0);">First Aid Beuty</a>
+                                        <a href="javascript:void(0);">Fresh</a>
+                                    </div>
+                                </div>
+                                <div class="col l3 col m3 col s12">
+                                    <div class="brand-category">g</div>
+                                    <div class="brands">
+                                        <a href="javascript:void(0);">ghd</a>
+                                        <a href="javascript:void(0);">Givenchy</a>
+                                        <a href="javascript:void(0);">GLO</a>
+                                        <a href="javascript:void(0);">Gucci</a>
+                                    </div>
+                                </div>
+                                <div class="col l3 col m3 col s12">
+                                    <div class="brand-category">h</div>
+                                    <div class="brands">
+                                        <a href="javascript:void(0);">Harimax</a>
+                                        <a href="javascript:void(0);">Hampton Sun</a>
+                                        <a href="javascript:void(0);">Hanae Mori</a>
+                                        <a href="javascript:void(0);">Hello Kitty</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="border"></div>
+                            
+                            <div class="brand-box">
+                                <div class="col l3 col m3 col s12">
+                                    <div class="brand-category">i</div>
+                                    <div class="brands">
+                                        <a href="javascript:void(0);">illamasqua</a>
+                                        <a href="javascript:void(0);">illume</a>
+                                        <a href="javascript:void(0);">issey Miyake</a>
+                                    </div>
+                                </div>
+                                <div class="col l3 col m3 col s12">
+                                    <div class="brand-category">j</div>
+                                    <div class="brands">
+                                        <a href="javascript:void(0);">Jake Black</a>
+                                        <a href="javascript:void(0);">Jean Paul Gaultier</a>
+                                        <a href="javascript:void(0);">Jennifer Aniston</a>
+                                        <a href="javascript:void(0);">Jimmy Choo</a>
+                                    </div>
+                                </div>
+                                <div class="col l3 col m3 col s12">
+                                    <div class="brand-category">k</div>
+                                    <div class="brands">
+                                        <a href="javascript:void(0);">Kat Von D</a>
+                                        <a href="javascript:void(0);">Kenzo</a>
+                                        <a href="javascript:void(0);">Korres</a>
+                                    </div>
+                                </div>
+                                <div class="col l3 col m3 col s12">
+                                    <div class="brand-category">l</div>
+                                    <div class="brands">
+                                        <a href="javascript:void(0);">Lacoste</a>
+                                        <a href="javascript:void(0);">Lacome</a>
+                                        <a href="javascript:void(0);">Lea Journo</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="border"></div>
+                            
+                            <div class="brand-box">
+                                <div class="col l3 col m3 col s12">
+                                    <div class="brand-category">m</div>
+                                    <div class="brands">
+                                        <a href="javascript:void(0);">Marula</a>
+                                        <a href="javascript:void(0);">me Smooth</a>
+                                        <a href="javascript:void(0);">Marud</a>
+                                        <a href="javascript:void(0);">Mustela</a>
+                                    </div>
+                                </div>
+                                <div class="col l3 col m3 col s12">
+                                    <div class="brand-category">n</div>
+                                    <div class="brands">
+                                        <a href="javascript:void(0);">Nars</a>
+                                        <a href="javascript:void(0);">NEST</a>
+                                        <a href="javascript:void(0);">NUDE Skincare</a>
+                                    </div>
+                                </div>
+                                <div class="col l3 col m3 col s12">
+                                    <div class="brand-category">o</div>
+                                    <div class="brands">
+                                        <a href="javascript:void(0);">Ojon</a>
+                                        <a href="javascript:void(0);">Origins</a>
+                                        <a href="javascript:void(0);">Ouidad</a>
+                                    </div>
+                                </div>
+                                <div class="col l3 col m3 col s12">
+                                    <div class="brand-category">p</div>
+                                    <div class="brands">
+                                        <a href="javascript:void(0);">Perfekt</a>
+                                        <a href="javascript:void(0);">Phyto</a>
+                                        <a href="javascript:void(0);">Prada</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="border"></div>
+                            
+                            <div class="brand-box">
+                                <div class="col l3 col m3 col s12">
+                                    <div class="brand-category">q</div>
+                                    <div class="brands">
+                                        <a href="javascript:void(0);">Acqua DI Parma</a>
+                                        <a href="javascript:void(0);">Agave</a>
+                                        <a href="javascript:void(0);">Algenist</a>
+                                    </div>
+                                </div>
+                                <div class="col l3 col m3 col s12">
+                                    <div class="brand-category">r</div>
+                                    <div class="brands">
+                                        <a href="javascript:void(0);">Radical Skin care</a>
+                                        <a href="javascript:void(0);">REN</a>
+                                        <a href="javascript:void(0);">Rita Haza</a>
+                                    </div>
+                                </div>
+                                <div class="col l3 col m3 col s12">
+                                    <div class="brand-category">s</div>
+                                    <div class="brands">
+                                        <a href="javascript:void(0);">Sachjauan</a>
+                                        <a href="javascript:void(0);">Shiseide</a>
+                                        <a href="javascript:void(0);">SK-||</a>
+                                        <a href="javascript:void(0);">Smashbox</a>
+                                    </div>
+                                </div>
+                                <div class="col l3 col m3 col s12">
+                                    <div class="brand-category">t</div>
+                                    <div class="brands">
+                                        <a href="javascript:void(0);">T3</a>
+                                        <a href="javascript:void(0);">Tanda</a>
+                                        <a href="javascript:void(0);">TanTowel</a>
+                                        <a href="javascript:void(0);">Tatcha</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="border"></div>
+                            
+                            <div class="brand-box">
+                                <div class="col l3 col m3 col s12">
+                                    <div class="brand-category">u</div>
+                                    <div class="brands">
+                                        <a href="javascript:void(0);">Urban Decay</a>
+                                    </div>
+                                </div>
+                                <div class="col l3 col m3 col s12">
+                                    <div class="brand-category">v</div>
+                                    <div class="brands">
+                                        <a href="javascript:void(0);">Values Inside Out</a>
+                                        <a href="javascript:void(0);">Versace</a>
+                                        <a href="javascript:void(0);">VERSO SKINCARE</a>
+                                    </div>
+                                </div>
+                                <div class="col l3 col m3 col s12">
+                                    <div class="brand-category">w</div>
+                                    <div class="brands">
+                                        <a href="javascript:void(0);">Wel</a>
+                                        <a href="javascript:void(0);">WEN @ by Chaz Dean</a>
+                                    </div>
+                                </div>
+                                <div class="col l3 col m3 col s12">
+                                    <div class="brand-category">x</div>
+                                    <div class="brands">
+                                        <a href="javascript:void(0);">Agave</a>
+                                        <a href="javascript:void(0);">Algenist</a>
+                                        <a href="javascript:void(0);">ALTERNA</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="border"></div>
+                            
+                            <div class="brand-box">
+                                <div class="col l3 col m3 col s12">
+                                    <div class="brand-category">y</div>
+                                    <div class="brands">
+                                        <a href="javascript:void(0);">Yu-Be</a>
+                                        <a href="javascript:void(0);">yves Saint </a>
+                                    </div>
+                                </div>
+                                <div class="col l3 col m3 col s12">
+                                    <div class="brand-category">z</div>
+                                    <div class="brands">
+                                        <a href="javascript:void(0);">Acqua DI Parma</a>
+                                        <a href="javascript:void(0);">Agave</a>
+                                        <a href="javascript:void(0);">Algenist</a>
+                                        <a href="javascript:void(0);">ALTERNA</a>
+                                    </div>
+                                </div>
+                                <div class="col l3 col m3 col s12">
+                                    <div class="brand-category">123</div>
+                                    <div class="brands">
+                                        <a href="javascript:void(0);">21 Drops</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+      
+        <!-- Footer -->
+        <footer class="page-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col l12 col m12 col s12">
+                        <!-- Footer Button -->
+                        <div class="footer-button center-align">
+                            <span class="mdi-action-history"></span>
+                        </div>
+                    </div>
+  
+                    <div class="col l12 col m12 col s12">
+                        <!-- Footer Column 1 -->
+                        <ul>
+                            <li class="footer-title">News</li>
+                            <li>
+                                <a href="javascript:void(0);">Nation</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">World</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Washington</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Elections</a>
+                            </li>
+                        </ul>
+                        
+                        <!-- Footer Column 2 -->
+                        <ul>
+                            <li class="footer-title">Sport</li>
+                            <li>
+                                <a href="javascript:void(0);">NFL</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">MLB</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">NBA</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">NHL</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">NCAAF</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">NCAAB</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">More</a>
+                            </li>
+                        </ul>
+                        
+                        <!-- Footer Column 3 -->
+                        <ul>
+                            <li class="footer-title">Life</li>
+                            <li>
+                                <a href="javascript:void(0);">People</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Movies</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Music</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">TV</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Books</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Entertain This</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">We to Watch</a>
+                            </li>
+                        </ul>
+                        
+                        <!-- Footer Column 4 -->
+                        <ul>
+                            <li class="footer-title">Money</li>
+                            <li>
+                                <a href="javascript:void(0);">Market</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Business</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Personal Finance</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Cars</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Careers</a>
+                            </li>
+                        </ul>
+                        
+                        <!-- Footer Column 5 -->
+                        <ul>
+                            <li class="footer-title">Tech</li>
+                            <li>
+                                <a href="javascript:void(0);">Personal Tech</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Gaming</a>
+                            </li>
+                        </ul>
+                        
+                        <!-- Footer Column 6 -->
+                        <ul>
+                            <li class="footer-title">Travel</li>
+                            <li>
+                                <a href="javascript:void(0);">Travel Advice</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Experience Travel</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Destinations</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Flights</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Cruises</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Deals</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Videos</a>
+                            </li>
+                        </ul>
+                        
+                        <!-- Footer Column 7 -->
+                        <ul>
+                            <li class="footer-title">Option</li>
+                            <li>
+                                <a href="javascript:void(0);">Cartoons</a>
+                            </li>
+                        </ul>
+                        
+                        <!-- Footer Column 8 -->
+                        <ul>
+                            <li class="footer-title">Weather</li>
+                            <li>
+                                <a href="javascript:void(0);">Hurricans</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Climate</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Footer Logo -->
+                <div class="logo">
+                    <a href="index.html"><img src="images/material-logo.png" alt="Logo"></a>
+                </div>
+            </div>
+            <!-- Footer Bottom -->
+            <div class="footer-copyright">
+                <div class="container">
+                    <div class="row">
+                    <!-- Copyright Text -->
+                    <div class="col l4 col m12 col s12">
+                        &copy; Copyright 2015 Material News by ThemeLeague
+                    </div>
+                    <div class="col l4 col m12 col s12">
+                        <!-- Social Icon -->
+                        <div class="social-icon">
+                            <a href="javascript:void(0);"><i class="fa fa-facebook"></i></a>
+                            <a href="javascript:void(0);"><i class="fa fa-twitter"></i></a>
+                            <a href="javascript:void(0);"><i class="fa fa-pinterest"></i></a>
+                            <a href="javascript:void(0);"><i class="fa fa-instagram"></i></a>
+                            <a href="javascript:void(0);"><i class="fa fa-youtube"></i></a>
+                            <a href="javascript:void(0);"><i class="fa fa-vine"></i></a>
+                            <a href="javascript:void(0);"><i class="fa fa-linkedin"></i></a>
+                            <a href="javascript:void(0);"><i class="fa fa-google-plus"></i></a>
+                            <a href="javascript:void(0);"><i class="fa fa-rss"></i></a>
+                            <a href="javascript:void(0);"><i class="fa fa-tumblr"></i></a>
+                        </div>
+                    </div>
+                    <div class="col l4 col m12 col s12">
+                        <!-- Footer Menu -->
+                        <div class="footer-menu">
+                            <ul>
+                                <li>
+                                    <a href="javascript:void(0);">Privacy</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">Advertisement</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">Contact us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+            
+  
+    <!-- Jquery -->
+    <script src="js/jquery-min.js"></script>
+    <!-- Materialize JS -->
+    <script src="js/materialize.js"></script>
+    <!-- Plugin JS -->
+    <script src="js/pgwslider.js"></script>
+    <script type='text/javascript' src='js/camera.js'></script>
+    <script src="js/jquery.touchSwipe.min.js"></script>
+    <script src="js/jquery.liquid-slider.js"></script>
+    <!-- Custom Js -->
+    <script src="js/init.js"></script>
+  </body>
+</html>
