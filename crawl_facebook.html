@@ -8,9 +8,14 @@
 </head>
 <body>
 
+    <div id="content">
+        <div id="dataExtracted"></div>
+        <a id="btSauce" href="#"><i class="fa fa-flask"></i> Sauce with ketchup my data!</a>
+    </div>
+
     <script>
         /**
-         *
+         * Crawl Facebook user information.
          */
 
         window.fbAsyncInit = function() {
@@ -24,8 +29,52 @@
 
             FB.api('/me?fields=about,relationship_status,gender,location,locale,interested_in,sports,inspirational_people,work,website,hometown,books,family,tagged_places,music,favorite_teams,favorite_athletes', function(response)
             {
-                console.log(response);
-            }, {
+                var data = {
+                    gender : '',
+                    locale : 'en_US',
+                    hometown : '',
+                    location : '',
+                    musics : []
+                };
+
+                if (response.hasOwnProperty('gender'))
+                {
+                    data.gender = response.gender;
+                }
+
+                if (response.hasOwnProperty('locale'))
+                {
+                    data.locale = response.locale;
+                }
+
+                if (response.hasOwnProperty('hometown') && response.hometown.hasOwnProperty('name'))
+                {
+                    data.hometown = response.hometown.name;
+                }
+
+                if (response.hasOwnProperty('location') && response.location.hasOwnProperty('name'))
+                {
+                    data.location = response.location.name;
+                }
+
+                FB.api('/me/likes', function(response)
+                {
+                    console.log(response);
+                },
+                {
+                    access_token : access_token
+                })
+
+                var html = '';
+
+                $.each(data, function(i, item)
+                {
+                    html += '<tr><td>' + i + '</td><td>' + item + '</td></tr>';
+                });
+
+                $('#dataExtracted').html('<table>' + html + '</table>');
+            },
+            {
                 access_token : access_token
             });
         };
@@ -38,10 +87,29 @@
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
 
-
     </script>
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+    <style>
+        #btSauce
+        {
+            display: inline-block;
+            line-height: 40px;
+            background-color: #14b96e;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            padding: 5px 20px;
+            border-radius: 6px;
+        }
+
+        #btSauce i
+        {
+            font-size: 20px;
+            padding-right: 5px;
+        }
+    </style>
 
 </body>
 </html>
