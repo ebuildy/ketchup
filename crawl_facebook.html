@@ -9,8 +9,10 @@
 <body>
 
     <div id="content">
-        <div id="dataExtracted"></div>
-        <a id="btSauce" href="#"><i class="fa fa-flask"></i> Sauce with ketchup my data!</a>
+        <div id="dataExtracted">
+            <i class="fa fa-refresh fa-spin fa-3x fa-fw"></i>
+        </div>
+        <a id="btSauce" href="#"><i class="fa fa-flask"></i> Sauce with ketchup!</a>
     </div>
 
     <script>
@@ -34,6 +36,8 @@
                     locale : 'en_US',
                     hometown : '',
                     location : '',
+                    places : [],
+                    likes : [],
                     musics : []
                 };
 
@@ -57,27 +61,62 @@
                     data.location = response.location.name;
                 }
 
+                if (response.hasOwnProperty('music') && response.music.hasOwnProperty('data'))
+                {
+                    $.each(response.music.data, function(i, item)
+                    {
+                       data.musics.push(item.name);
+                    });
+                }
+
                 FB.api('/me/likes', function(response)
                 {
-                    console.log(response);
+                    $.each(response.data, function(i, item)
+                    {
+                        data.likes.push(item.name);
+                    });
+
+                    FB.api('/me/tagged_places', function(response)
+                    {
+                        $.each(response.data, function(i, item)
+                        {
+                            if (item.hasOwnProperty('place') && item.place.hasOwnProperty('location'))
+                            {
+                                data.places.push(item.place.location.city);
+                            }
+
+                            if (item.hasOwnProperty('place') && item.place.hasOwnProperty('name'))
+                            {
+                                data.places.push(item.place.name);
+                            }
+                        });
+
+                        buildUserBagWords(data);
+                    },
+                    {
+                        access_token : access_token
+                    });
                 },
                 {
                     access_token : access_token
-                })
-
-                var html = '';
-
-                $.each(data, function(i, item)
-                {
-                    html += '<tr><td>' + i + '</td><td>' + item + '</td></tr>';
                 });
-
-                $('#dataExtracted').html('<table>' + html + '</table>');
             },
             {
                 access_token : access_token
             });
         };
+
+        function buildUserBagWords(data)
+        {
+            var html = '';
+
+            $.each(data, function(i, item)
+            {
+                html += '<tr><td>' + i + '</td><td>' + item + '</td></tr>';
+            });
+            console.log(data);
+            $('#dataExtracted').html('<table>' + html + '</table>');
+        }
 
         (function(d, s, id){
             var js, fjs = d.getElementsByTagName(s)[0];
