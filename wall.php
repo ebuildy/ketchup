@@ -279,7 +279,7 @@ function getMixRow(){
                 <div class="container">
                     <div class="row">
                         <div class="col l4 col m5 col s12">
-                            <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="mdi-navigation-menu"></i></a>
+                            <a href="#" data-activates="slide-out" class="button-collapse show-on-large" style="visibility: hidden;"><i class="mdi-navigation-menu"></i></a>
                             <!-- Dropdown -->
 
                         </div>
@@ -290,12 +290,6 @@ function getMixRow(){
                             </div>
                         </div>
                         <div class="col l4 col m4 col s12 pull-right">
-                            <!-- Search Button -->
-                            <form class="searchbox">
-                                <input type="text" placeholder="Type and Press Enter" name="search" class="searchbox-input" required>
-                                <input type="submit" class="searchbox-submit">
-                                <span class="searchbox-icon"><i class="mdi-action-search"></i></span>
-                            </form>
                             <!-- LogIn Link -->
                             <a href="javascript:" class="right login"><img class="img-avatar" src="<?php echo $avatar; ?>" /></a>
                         </div>
@@ -309,7 +303,7 @@ function getMixRow(){
                     <div class="container">
                         <div class="row">
                             <div class="col l4 col m5 col s2">
-                                <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="mdi-navigation-menu"></i></a>
+                                <a href="#" data-activates="slide-out" class="button-collapse show-on-large" style="visibility: hidden;"><i class="mdi-navigation-menu"></i></a>
                             </div>
                             <div class="col l4 col m4 col s5">    
                                 <!-- Dropdown -->
@@ -343,60 +337,7 @@ function getMixRow(){
                 </div>
             </div>
         </header>
-        
-        <!-- Sidebar Navigation -->
-        <ul id="slide-out" class="side-nav full">
-            <li class="logo-title"><a href="javascript:void(0);">Material News</a></li>
-            <!-- Dropdown Menu -->
-            <li class="dropdown-menu">
-                <ul class="collapsible" data-collapsible="expandable">
-                    <li class="">
-                        <div class="collapsible-header waves-effect waves active"><i class="fa fa-file"></i> Home Page <i class="fa fa-angle-right"></i></div>
-                        <div style="display: block;" class="collapsible-body">
-                            <ul>
-                                <li class="waves-effect"><a href="index.html"><i class="fa fa-angle-right"></i> Home Page 1</a></li>
-                                <li class="waves-effect active"><a href="index2.html"><i class="fa fa-angle-right"></i> Home Page 2</a></li>
-                                <li class="waves-effect"><a href="index3.html"><i class="fa fa-angle-right"></i> Home Page 3</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="">
-                        <div class="collapsible-header waves-effect waves"><i class="fa fa-file-text"></i> News Detail<i class="fa fa-angle-right"></i></div>
-                        <div style="display: none;" class="collapsible-body">
-                            <ul>
-                                <li class="waves-effect"><a href="news-single1.html"><i class="fa fa-angle-right"></i> News Detail 1</a></li>
-                                <li class="waves-effect"><a href="news-single2.html"><i class="fa fa-angle-right"></i> News Detail 2</a></li>
-                                <li class="waves-effect"><a href="news-single3.html"><i class="fa fa-angle-right"></i> News Detail 3</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="">
-                        <div class="collapsible-header waves-effect waves"><i class="fa fa-file-text"></i> Category <i class="fa fa-angle-right"></i></div>
-                        <div style="display: none;" class="collapsible-body">
-                            <ul>
-                                <li class="waves-effect"><a href="index-sport.html"><i class="fa fa-angle-right"></i> Sport </a></li>
-                                <li class="waves-effect"><a href="index-life.html"><i class="fa fa-angle-right"></i> Life </a></li>
-                                <li class="waves-effect"><a href="index-travel.html"><i class="fa fa-angle-right"></i> Travel </a></li>
-                                <li class="waves-effect"><a href="index-money.html"><i class="fa fa-angle-right"></i> Money </a></li>
-                                <li class="waves-effect"><a href="index-tech.html"><i class="fa fa-angle-right"></i> Tech  </a></li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </li>
-            <li class="waves-effect"><a href="shop.html"><i class="fa fa-tag"></i>Shop</a></li>
-            <li class="waves-effect"><a href="catalog.html"><i class="fa fa-briefcase"></i>Catalog</a></li>
-            <li class="waves-effect"><a href="product-detail.html"><i class="fa fa-plus-square"></i>product Detail</a></li>
-            <li class="waves-effect"><a href="shopping-cart.html"><i class="fa fa-shopping-cart"></i>Shopping Cart</a></li>
-            <li class="waves-effect"><a href="profile.html"><i class="fa fa-user"></i>Profile</a></li>
-            <li class="waves-effect"><a href="brand1.html"><i class="fa fa-rocket"></i>Brand Style 1</a></li>
-            <li class="waves-effect"><a href="brand2.html"><i class="fa fa-plane"></i>Brand Style 2</a></li>
-            <li class="waves-effect"><a href="about.html"><i class="fa fa-users"></i>About</a></li>
-            <li class="waves-effect"><a href="contact1.html"><i class="fa fa-phone"></i>Contact Style 1</a></li>
-            <li class="waves-effect"><a href="contact2.html"><i class="fa fa-map-marker"></i>Contact Style 2</a></li>
-            <li class="waves-effect"><a href="login.html"><i class="fa fa-lock"></i>Login</a></li>
-        </ul>
-      
+
         <!-- Main Wrapper -->
         <div class="wrapper">
             <div class="container">
