@@ -37,6 +37,10 @@ $data[4]['description'] = "Users will receive a free update to WatchOS 3 this fa
 $data[4]['thumbnail'] = "http://cdn1.macworld.co.uk/cmsdata/features/3606039/apple_watch_2_wish_list_thumb800.jpg";
 $data[4]['time'] = "Yesterday";
 $data[4]['link'] = "http://www.businessinsider.de/apple-watchos-30-is-a-major-interface-redesign-2016-6?r=UK&IR=T";
+$data[4]['shopping']['link'] = "http://ad.zanox.com/ppc/?28802022C11983670&ULP=[[flip4new.de/p/38153-verkaufen]]&zpar9=[[43EEF0445509C7205827]]";
+$data[4]['shopping']['price'] = "449,00 €";
+$data[4]['shopping']['title'] = "Apple Watch";
+
 
 $data[5]['title'] = "<b>Docker</b> builds container orchestration right into its core <b>Docker</b> Engine";
 $data[5]['description'] = "<b>Docker</b>, which is hosting its sold-out developer conference in Seattle this week, today announced a major addition to its core <b>Docker</b> Engine";
@@ -44,11 +48,11 @@ $data[5]['thumbnail'] = "https://tctechcrunch2011.files.wordpress.com/2016/06/im
 $data[5]['time'] = "Yesterday";
 $data[5]['link'] = "https://techcrunch.com/2016/06/20/docker-builds-swarm-right-into-its-core-core-tools/";
 
-$data[6]['title'] = "<b>Daft Punk</b> and Jarvis Cocker have contributed to a Stanley Kubrick exhibition";
+$data[6]['title'] = "<b>Knossos palace</b> : Archaeologist says he's found part of throne of ancient Greek kings";
 $data[6]['description'] = "A new exhibition that pays tribute to the work of deceased director Stanley Kubrick is being hosted at Somerset House in London this summer";
-$data[6]['thumbnail'] = "http://www.mixmag.net/assets/uploads/images/_columns2/kubrick.jpg";
-$data[6]['time'] = "3 days ago";
-$data[6]['link'] = "http://www.mixmag.net/read/daft-punk-are-daydreaming-with-stanley-kubrick-at-london-exhibition-news";
+$data[6]['thumbnail'] = "http://a57.foxnews.com/images.foxnews.com/content/fox-news/science/2016/06/15/archaeologist-says-hes-found-part-throne-ancient-greek-kings/_jcr_content/par/featured-media/media-0.img.jpg/876/493/1465959442289.jpg?ve=1&tl=1";
+$data[6]['time'] = "4 days ago";
+$data[6]['link'] = "http://www.foxnews.com/science/2016/06/15/archaeologist-says-hes-found-part-throne-ancient-greek-kings.html";
 
 $data[7]['title'] = "How the Guardian online is breaking news with real-time <b>big data</b> analytics";
 $data[7]['description'] = "Transforming a <b>hackaday</b> project into the backbone of how journalists work in a data driven organisation";

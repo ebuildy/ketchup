@@ -63,7 +63,7 @@
     width: calc(100% + 40px);
     left: -20px;
     padding: 5px 20px;
-    bottom: -4px;
+    bottom: -8px;
 	
 }
 .shopping .shop-price{
@@ -626,8 +626,13 @@ ul.pgwSlider > li span, .pgwSlider > .ps-list > li span
 
 /********************** 4.3 News **************************/
 
-.news{ background-color:#fff; overflow: hidden; }
-.news.vertical { max-height: 400px; }
+.news{ background-color:#fff; overflow: hidden;position:relative; }
+.news-description {
+    padding: 8px 20px;
+    position: absolute;
+    bottom: 0;
+}
+.news.vertical { height: 400px; }
 .news.vertical .news-image img,
 .news.horizontal .news-image img{
   transition-duration: 1.2s;
