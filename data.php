@@ -51,18 +51,24 @@ $data[5]['description'] = "<b>Docker</b>, which is hosting its sold-out develope
 $data[5]['thumbnail'] = "https://tctechcrunch2011.files.wordpress.com/2016/06/img_20160619_175158.jpg?w=738";
 $data[5]['time'] = "Yesterday";
 $data[5]['link'] = "https://techcrunch.com/2016/06/20/docker-builds-swarm-right-into-its-core-core-tools/";
+$data[5]['tags']['type'] = "thumbs-up";
+$data[5]['tags']['q'] = "Apple";
 
 $data[6]['title'] = "<b>Knossos palace</b> : Archaeologist says he's found part of throne of ancient Greek kings";
 $data[6]['description'] = "A new exhibition that pays tribute to the work of deceased director Stanley Kubrick is being hosted at Somerset House in London this summer";
 $data[6]['thumbnail'] = "http://a57.foxnews.com/images.foxnews.com/content/fox-news/science/2016/06/15/archaeologist-says-hes-found-part-throne-ancient-greek-kings/_jcr_content/par/featured-media/media-0.img.jpg/876/493/1465959442289.jpg?ve=1&tl=1";
 $data[6]['time'] = "4 days ago";
 $data[6]['link'] = "http://www.foxnews.com/science/2016/06/15/archaeologist-says-hes-found-part-throne-ancient-greek-kings.html";
+$data[6]['tags']['type'] = "map";
+$data[6]['tags']['q'] = "Apple";
 
 $data[7]['title'] = "How the Guardian online is breaking news with real-time <b>big data</b> analytics";
 $data[7]['description'] = "Transforming a <b>hackaday</b> project into the backbone of how journalists work in a data driven organisation";
 $data[7]['thumbnail'] = "http://www.cbronline.com/BRHome/ResizeImage/_Uploads_NewsArticle_4922632_main.JPG/1440/828/Details/0/0";
 $data[7]['time'] = "5 days ago";
 $data[7]['link'] = "http://www.cbronline.com/news/big-data/analytics/exclusive-how-the-guardian-online-is-breaking-news-with-real-time-big-data-analytics-4922632";
+$data[7]['tags']['type'] = "thumbs-up";
+$data[7]['tags']['q'] = "Apple";
 
 $data[8]['title'] = "<b>Axel Springer</b> buys eMarketer to reduce digital ad dependency";
 $data[8]['description'] = "The German publisher continues to focus on building its digital subscription business with $250m purchase of research company";
