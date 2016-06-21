@@ -17,7 +17,7 @@ $placesData = [];
 
 foreach($places as $place)
 {
-    $parallelcurl->startRequest('https://api.qwant.com/api/search/news?q=' . urlencode($place) . '&locale=' . $locale, 'on_request_done', array('q' => $place, 'type' => 'place'));
+    $parallelcurl->startRequest('https://api.qwant.com/api/search/news?q=' . urlencode($place) . '&locale=' . $locale, 'on_request_done', array('q' => $place, 'type' => 'map'));
 }
 
 // LIKES -------------------------------

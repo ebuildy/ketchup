@@ -43,7 +43,7 @@ $data[4]['link'] = "http://www.businessinsider.de/apple-watchos-30-is-a-major-in
 $data[4]['shopping']['link'] = "http://ad.zanox.com/ppc/?28802022C11983670&ULP=[[flip4new.de/p/38153-verkaufen]]&zpar9=[[43EEF0445509C7205827]]";
 $data[4]['shopping']['price'] = "449,00 €";
 $data[4]['shopping']['title'] = "Apple Watch";
-$data[4]['tags']['type'] = "place";
+$data[4]['tags']['type'] = "map";
 $data[4]['tags']['q'] = "Apple";
 
 $data[5]['title'] = "<b>Docker</b> builds container orchestration right into its core <b>Docker</b> Engine";
@@ -76,5 +76,5 @@ $data[9]['thumbnail'] = "http://fr.cdn.v5.futura-sciences.com/builds/images/thum
 $data[9]['time'] = "1 week ago";
 $data[9]['link'] = "http://www.futura-sciences.com/magazines/high-tech/infos/actu/d/internet-qwant-music-moteur-recherche-specialise-musique-63116/";
 
-$data[10]['video_link'] = "https://www.youtube.com/embed/GDpmVUEjagg";
+$data[10]['video_link'] = "https://www.youtube.com/embed/GDpmVUEjagg?start=111";
 ?>
