@@ -1,69 +1,13 @@
 <?php
+
+require('data.php');
+
 $currentIndex = 0;
-$data = array();
-$data[0]['title'] = "Why The Legend of Zelda: Breath of the Wild was the Best Game at E3 2016";
-$data[0]['description'] = "One week ago, I played Zelda: Breath of the Wild and thought it was Nintendo's most ambitious game in years. It was the first game I played at this year's E3, and it ";
-$data[0]['thumbnail'] = "http://cloud.attackofthefanboy.com/wp-content/uploads/2016/02/The-Legend-of-Zelda-Wii-U.jpg?fb38c8";
-$data[0]['time'] = "Today";
-$data[0]['link'] = "http://www.eurogamer.net/articles/2016-06-20-we-played-zelda-breath-of-the-wild-four-times-and-still-didnt-see-it-all";
-
-$data[0]['title'] = "Why The Legend of Zelda: Breath of the Wild was the Best Game at E3 2016";
-$data[0]['description'] = "One week ago, I played Zelda: Breath of the Wild and thought it was Nintendo's most ambitious game in years. It was the first game I played at this year's E3, and it ";
-$data[0]['thumbnail'] = "http://cloud.attackofthefanboy.com/wp-content/uploads/2016/02/The-Legend-of-Zelda-Wii-U.jpg?fb38c8";
-$data[0]['time'] = "Today";
-$data[0]['link'] = "http://www.eurogamer.net/articles/2016-06-20-we-played-zelda-breath-of-the-wild-four-times-and-still-didnt-see-it-all";
-
-$data[0]['title'] = "Why The Legend of Zelda: Breath of the Wild was the Best Game at E3 2016";
-$data[0]['description'] = "One week ago, I played Zelda: Breath of the Wild and thought it was Nintendo's most ambitious game in years. It was the first game I played at this year's E3, and it ";
-$data[0]['thumbnail'] = "http://cloud.attackofthefanboy.com/wp-content/uploads/2016/02/The-Legend-of-Zelda-Wii-U.jpg?fb38c8";
-$data[0]['time'] = "Today";
-$data[0]['link'] = "http://www.eurogamer.net/articles/2016-06-20-we-played-zelda-breath-of-the-wild-four-times-and-still-didnt-see-it-all";
-
-$data[0]['title'] = "Why The Legend of Zelda: Breath of the Wild was the Best Game at E3 2016";
-$data[0]['description'] = "One week ago, I played Zelda: Breath of the Wild and thought it was Nintendo's most ambitious game in years. It was the first game I played at this year's E3, and it ";
-$data[0]['thumbnail'] = "http://cloud.attackofthefanboy.com/wp-content/uploads/2016/02/The-Legend-of-Zelda-Wii-U.jpg?fb38c8";
-$data[0]['time'] = "Today";
-$data[0]['link'] = "http://www.eurogamer.net/articles/2016-06-20-we-played-zelda-breath-of-the-wild-four-times-and-still-didnt-see-it-all";
-
-$data[0]['title'] = "Why The Legend of Zelda: Breath of the Wild was the Best Game at E3 2016";
-$data[0]['description'] = "One week ago, I played Zelda: Breath of the Wild and thought it was Nintendo's most ambitious game in years. It was the first game I played at this year's E3, and it ";
-$data[0]['thumbnail'] = "http://cloud.attackofthefanboy.com/wp-content/uploads/2016/02/The-Legend-of-Zelda-Wii-U.jpg?fb38c8";
-$data[0]['time'] = "Today";
-$data[0]['link'] = "http://www.eurogamer.net/articles/2016-06-20-we-played-zelda-breath-of-the-wild-four-times-and-still-didnt-see-it-all";
-
-$data[0]['title'] = "Why The Legend of Zelda: Breath of the Wild was the Best Game at E3 2016";
-$data[0]['description'] = "One week ago, I played Zelda: Breath of the Wild and thought it was Nintendo's most ambitious game in years. It was the first game I played at this year's E3, and it ";
-$data[0]['thumbnail'] = "http://cloud.attackofthefanboy.com/wp-content/uploads/2016/02/The-Legend-of-Zelda-Wii-U.jpg?fb38c8";
-$data[0]['time'] = "Today";
-$data[0]['link'] = "http://www.eurogamer.net/articles/2016-06-20-we-played-zelda-breath-of-the-wild-four-times-and-still-didnt-see-it-all";
-
-$data[0]['title'] = "Why The Legend of Zelda: Breath of the Wild was the Best Game at E3 2016";
-$data[0]['description'] = "One week ago, I played Zelda: Breath of the Wild and thought it was Nintendo's most ambitious game in years. It was the first game I played at this year's E3, and it ";
-$data[0]['thumbnail'] = "http://cloud.attackofthefanboy.com/wp-content/uploads/2016/02/The-Legend-of-Zelda-Wii-U.jpg?fb38c8";
-$data[0]['time'] = "Today";
-$data[0]['link'] = "http://www.eurogamer.net/articles/2016-06-20-we-played-zelda-breath-of-the-wild-four-times-and-still-didnt-see-it-all";
-
-$data[0]['title'] = "Why The Legend of Zelda: Breath of the Wild was the Best Game at E3 2016";
-$data[0]['description'] = "One week ago, I played Zelda: Breath of the Wild and thought it was Nintendo's most ambitious game in years. It was the first game I played at this year's E3, and it ";
-$data[0]['thumbnail'] = "http://cloud.attackofthefanboy.com/wp-content/uploads/2016/02/The-Legend-of-Zelda-Wii-U.jpg?fb38c8";
-$data[0]['time'] = "Today";
-$data[0]['link'] = "http://www.eurogamer.net/articles/2016-06-20-we-played-zelda-breath-of-the-wild-four-times-and-still-didnt-see-it-all";
-
-$data[0]['title'] = "Why The Legend of Zelda: Breath of the Wild was the Best Game at E3 2016";
-$data[0]['description'] = "One week ago, I played Zelda: Breath of the Wild and thought it was Nintendo's most ambitious game in years. It was the first game I played at this year's E3, and it ";
-$data[0]['thumbnail'] = "http://cloud.attackofthefanboy.com/wp-content/uploads/2016/02/The-Legend-of-Zelda-Wii-U.jpg?fb38c8";
-$data[0]['time'] = "Today";
-$data[0]['link'] = "http://www.eurogamer.net/articles/2016-06-20-we-played-zelda-breath-of-the-wild-four-times-and-still-didnt-see-it-all";
-
-$data[0]['title'] = "Why The Legend of Zelda: Breath of the Wild was the Best Game at E3 2016";
-$data[0]['description'] = "One week ago, I played Zelda: Breath of the Wild and thought it was Nintendo's most ambitious game in years. It was the first game I played at this year's E3, and it ";
-$data[0]['thumbnail'] = "http://cloud.attackofthefanboy.com/wp-content/uploads/2016/02/The-Legend-of-Zelda-Wii-U.jpg?fb38c8";
-$data[0]['time'] = "Today";
-$data[0]['link'] = "http://www.eurogamer.net/articles/2016-06-20-we-played-zelda-breath-of-the-wild-four-times-and-still-didnt-see-it-all";
 
 function loadData(){
 	global $currentIndex;
-	$object = $data[$num];	
+	global $data;
+	$object = $data[$currentIndex];	
 	$currentIndex++;
 	return $object;
 }
@@ -291,35 +235,37 @@ function loadData(){
                         <div class="col l3 col m6 col s12">
                             <!-- Horizontal News Box -->
                             <div class="news vertical z-depth-1">
-                                <!-- Horizontal News Image -->    
+                                <!-- Horizontal News Image -->  
+								<?php $obj = loadData(); ?>								
                                 <div class="news-image">
-                                    <img class="responsive-img" src="http://placehold.it/350x235?text=News Image" alt="news Image">
+                                    <img class="responsive-img" src="<?php echo $obj['thumbnail']; ?>" alt="news Image">
                                 </div>
                                 <!-- Horizontal News Description -->
-                                <div class="news-description">
-                                    <div class="news-time">
-                                        <i class="fa fa-clock-o"></i> 9 min ago 
-                                    </div>
-                                    <div class="news-title"><a href="javascript:void(0);"> Nam erat nulla, auctor a eros vitae, hendrerit efficitur. </a></div>
-                                    <div class="news-content"><p>et bibendum leo metus vel magna. In dapibus ac tellus non rutrum Integer. ut nisi risus.</p></div>
-                                </div>
+								  <div class="news-description">
+										<div class="news-time">
+											<i class="fa fa-clock-o"></i> <?php echo $obj['time']; ?>
+										</div>
+										<div class="news-title"><a href="<?php echo $obj['link']; ?>"><?php echo $obj['title']; ?></a></div>
+										<div class="news-content"><p><?php echo $obj['description']; ?></p></div>
+									</div>
                             </div>
                         </div>
                         <div class="col l3 col m6 col s12">
                             <!-- vertical News Box -->
                             <div class="news vertical z-depth-1">
+							<?php $obj = loadData(); ?>
                                 <!-- vertical News Image -->
                                 <div class="news-image">
-                                    <img class="responsive-img" src="http://placehold.it/350x235?text=News Image" alt="news Image">
+                                    <img class="responsive-img" src="<?php echo $obj['thumbnail']; ?>" alt="news Image">
                                 </div>
                                 <!-- vertical News Description -->
-                                <div class="news-description">
-                                    <div class="news-time">
-                                        <i class="fa fa-clock-o"></i> 9 min ago 
-                                    </div>
-                                    <div class="news-title"> <a href="javascript:void(0);"> Nam erat nulla, auctor a eros vitae, hendrerit efficitur magna. </a></div>
-                                    <div class="news-content"><p>et bibendum leo metus vel magna. In dapibus ac tellus non rutrum. Integer ut nisi risus In dapibus ac tellus non rutrum</p></div>
-                                </div>
+								  <div class="news-description">
+										<div class="news-time">
+											<i class="fa fa-clock-o"></i> <?php echo $obj['time']; ?>
+										</div>
+										<div class="news-title"><a href="<?php echo $obj['link']; ?>"><?php echo $obj['title']; ?></a></div>
+										<div class="news-content"><p><?php echo $obj['description']; ?></p></div>
+									</div>
                             </div>
                         </div>
                     </div>
