@@ -1,6 +1,6 @@
 <?php 
 
-$avatar = "https://avatars1.githubusercontent.com/u/5296748?v=3&amp;s=460";
+$avatar = "https://scontent.ftxl1-1.fna.fbcdn.net/v/t1.0-9/12806166_10156577633200716_6040071364408872107_n.jpg?oh=554d244e7389610e2675a1a9c305b1cf&oe=57D76AF7";
 $data = array();
 
 $data[0]['title'] = "<b>Bayern Munich</b> defender Mats Hummels explains why he snubbed Manchester United transfer";
