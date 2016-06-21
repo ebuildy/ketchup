@@ -18,12 +18,19 @@ $data[2]['description'] = "Samsung and <b>Apple</b> are quickly being challenged
 $data[2]['thumbnail'] = "http://d.ecumenicalnews.com/full/17449/galaxy-s7-vs-oneplus-3.jpg?w=590&h=446&l=50&t=40";
 $data[2]['time'] = "Today";
 $data[2]['link'] = "http://www.ecumenicalnews.com/article/samsung-galaxy-s7-vs-oneplus-3-latest-flagship-from-oneplus-3-has-outstanding-hardware/46321.htm";
+$data[2]['shopping']['link'] = "http://www.auchan.fr/samsung-smartphone-galaxy-s7-blanc-32go/p-c887452?utm_source=leguide&utm_medium=comparateur&utm_campaign=Telephonie&utm_content=Smartphones&utm_term=C887452";
+$data[2]['shopping']['price'] = "699,00 €";
+$data[2]['shopping']['title'] = "Galaxy S7";
 
 $data[3]['title'] = "Leigh Halfpenny can write Welsh <b>rugby</b> history for <b>Toulon</b> in the Top 14 final against Dan Carter's Racing 92 at Nou Camp";
 $data[3]['description'] = "Rugby director Bernard Laporte hails return of Lions star and believes full-back can become the first Welshman to win the French domestic title";
 $data[3]['thumbnail'] = "http://i2.walesonline.co.uk/incoming/article11498044.ece/ALTERNATES/s615/GettyImages-541075328.jpg";
 $data[3]['time'] = "Yesterday";
 $data[3]['link'] = "http://www.walesonline.co.uk/sport/rugby/leigh-halfpenny-can-write-welsh-11498370";
+$data[3]['event']['link'] = "http://www.lnr.fr/rugby-billetterie";
+$data[3]['event']['date'] = "June 24th 2016, 20h45";
+$data[3]['event']['title'] = "TOP 14 Rugby Finale 2016";
+
 
 $data[4]['title'] = "<b>Apple</b> explains why it totally redesigned how the <b>Apple</b> Watch works";
 $data[4]['description'] = "Users will receive a free update to WatchOS 3 this fall, which is essentially a wholesale redesign of the <b>Apple</b> Watch interface";

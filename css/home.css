@@ -295,3 +295,7 @@
     transform: translateY(-50%);
     z-index: 2;
 }
+
+.news.vertical .news-image {
+    max-height: 168px;
+}
