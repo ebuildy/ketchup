@@ -11,6 +11,30 @@ function loadData(){
 	$currentIndex++;
 	return $object;
 }
+
+function getDescription($obj){
+		$template = "";
+		if( !empty($obj['shopping'])) { 
+			$template = "<div class=\"news-content shopping\">"
+						."	<div style=\"font-weight:bold;\"><i class=\"fa fa-cart-plus\"></i> Shopping</div>"
+						."	<div class=\"shop-title\">". $obj['shopping']['title'] ."</div>"
+						."	<div class=\"shop-price\">from ". $obj['shopping']['price'] ."</div>"
+						."	<div class=\"shop-buy\"><a target=\"_blank\" href=\"". $obj['shopping']['link'] ."\">Buy now</a></div>"
+						."</div>";
+		}else if( !empty($obj['event'])) { 
+			$template = "<div class=\"news-content event\">"
+						."	<div style=\"font-weight:bold;\"><i class=\"fa fa-ticket\"></i> Event</div>"
+						."	<div class=\"event-title\">". $obj['event']['title'] ."</div>"
+						."	<div class=\"event-date\">". $obj['event']['date'] ."</div>"
+						."	<div class=\"event-buy\"><a target=\"_blank\" href=\"". $obj['event']['link'] ."\">Buy now</a></div>"
+						."</div>";
+		}else{
+			$template = "<p>".$obj['description']."</p>";
+		}
+		
+		echo $template;
+	
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -120,13 +144,6 @@ function loadData(){
                     </div>
                 </div>
             </div>
-           
-            <!-- Navigation -->
-            <nav role="navigation"  class="hide-on-small-only">
-                <div class="nav-wrapper menu-category" style="color:black;text-transform:uppercase;font-weight: bold;">
-					Digital content that matters only to you
-                </div>
-            </nav>
         </header>
         
         <!-- Sidebar Navigation -->
@@ -184,6 +201,13 @@ function loadData(){
       
         <!-- Main Wrapper -->
         <div class="wrapper">
+<nav role="navigation" class="hide-on-small-only" style="
+    background: white;margin-bottom: 10px;
+">
+                <div class="nav-wrapper menu-category" style="color:black;text-transform:uppercase;font-weight: bold;">
+					Digital content that matters only to you
+                </div>
+            </nav>		
             <div class="container">
                 <section class="section">
                     <div class="row">
@@ -205,7 +229,7 @@ function loadData(){
                                                 <i class="fa fa-clock-o"></i> <?php echo $obj['time']; ?>
                                             </div>
                                             <div class="news-title"><a href="<?php echo $obj['link']; ?>"><?php echo $obj['title']; ?></a></div>
-                                            <div class="news-content"><p><?php echo $obj['description']; ?></p></div>
+                                            <div class="news-content"><?php getDescription($obj); ?></div>
                                         </div>
                                     </div>									
                                 </div>
@@ -226,7 +250,7 @@ function loadData(){
                                                 <i class="fa fa-clock-o"></i> <?php echo $obj['time']; ?>
                                             </div>
                                             <div class="news-title"><a href="<?php echo $obj['link']; ?>"><?php echo $obj['title']; ?></a></div>
-                                            <div class="news-content"><p><?php echo $obj['description']; ?></p></div>
+                                            <div class="news-content"><?php getDescription($obj); ?></div>
                                         </div>
                                     </div>
                                 </div>
@@ -246,7 +270,7 @@ function loadData(){
 											<i class="fa fa-clock-o"></i> <?php echo $obj['time']; ?>
 										</div>
 										<div class="news-title"><a href="<?php echo $obj['link']; ?>"><?php echo $obj['title']; ?></a></div>
-										<div class="news-content"><p><?php echo $obj['description']; ?></p></div>
+										<div class="news-content"><?php getDescription($obj); ?></div>
 									</div>
                             </div>
                         </div>
@@ -264,7 +288,7 @@ function loadData(){
 											<i class="fa fa-clock-o"></i> <?php echo $obj['time']; ?>
 										</div>
 										<div class="news-title"><a href="<?php echo $obj['link']; ?>"><?php echo $obj['title']; ?></a></div>
-										<div class="news-content"><p><?php echo $obj['description']; ?></p></div>
+										<div class="news-content"><?php getDescription($obj); ?></div>
 									</div>
                             </div>
                         </div>
@@ -276,94 +300,98 @@ function loadData(){
                         <!-- vertical News Box -->
                         <div class="news vertical z-depth-1">
                             <!-- vertical News Image -->
-                            <div class="news-image">
-                                <img class="responsive-img" src="http://placehold.it/350x235?text=News Image" alt="news Image">
-                            </div>
-                            <!-- vertical News Description -->
-                            <div class="news-description">
-                                <div class="news-time">
-                                    <i class="fa fa-clock-o"></i> 9 min ago 
+							<?php $obj = loadData(); ?>
+                                <div class="news-image">
+                                    <img class="responsive-img" src="<?php echo $obj['thumbnail']; ?>" alt="news Image">
                                 </div>
-                                <div class="news-title"><a href="javascript:void(0);"> Nam erat nulla, auctor a eros vitae, hendrerit efficitur magna leo metus vel magna. </a></div>
-                                <div class="news-content"><p>et bibendum leo metus vel magna. In dapibus ac tellus non rutrum Integer.</p></div>
-                            </div>
+                                <!-- vertical News Description -->
+								  <div class="news-description">
+										<div class="news-time">
+											<i class="fa fa-clock-o"></i> <?php echo $obj['time']; ?>
+										</div>
+										<div class="news-title"><a href="<?php echo $obj['link']; ?>"><?php echo $obj['title']; ?></a></div>
+										<div class="news-content"><?php getDescription($obj); ?></div>
+									</div>
                         </div>
                     </div>
                     <div class="col l3 col m6 col s12">
                         <!-- vertical News Box -->
                         <div class="news vertical z-depth-1">
                             <!-- vertical News Image -->
-                            <div class="news-image">
-                                <img class="responsive-img" src="http://placehold.it/350x235?text=News Image" alt="news Image">
-                            </div>
-                            <!-- vertical News Description -->
-                            <div class="news-description">
-                                <div class="news-time">
-                                    <i class="fa fa-clock-o"></i> 9 min ago 
+							<?php $obj = loadData(); ?>
+							
+                                <div class="news-image">
+                                    <img class="responsive-img" src="<?php echo $obj['thumbnail']; ?>" alt="news Image">
                                 </div>
-                                <div class="news-title"> <a href="javascript:void(0);"> Nam erat nulla, auctor a eros vitae, hendrerit efficitur magna. </a></div>
-                                <div class="news-content"><p>et bibendum leo metus vel magna. In dapibus ac tellus non rutrum. Integer ut nisi risus In dapibus ac tellus non rutrum</p></div>
-                            </div>
+                                <!-- vertical News Description -->
+								  <div class="news-description">
+										<div class="news-time">
+											<i class="fa fa-clock-o"></i> <?php echo $obj['time']; ?>
+										</div>
+										<div class="news-title"><a href="<?php echo $obj['link']; ?>"><?php echo $obj['title']; ?></a></div>
+										<div class="news-content"><?php getDescription($obj); ?></div>
+									</div>
                         </div>
                     </div>
                     <div class="col l3 col m6 col s12">
                         <!-- vertical News Box -->
                         <div class="news vertical z-depth-1">
                             <!-- vertical News Image -->
-                            <div class="news-image">
-                                <img class="responsive-img" src="http://placehold.it/350x235?text=News Image" alt="news Image">
-                            </div>
-                            <!-- vertical News Description -->
-                            <div class="news-description">
-                                <div class="news-time">
-                                    <i class="fa fa-clock-o"></i> 9 min ago 
+							<?php $obj = loadData(); ?>
+
+                                <div class="news-image">
+                                    <img class="responsive-img" src="<?php echo $obj['thumbnail']; ?>" alt="news Image">
                                 </div>
-                                <div class="news-title"><a href="javascript:void(0);"> Nam erat nulla, auctor a eros vitae, hendrerit efficitur.</a></div>
-                                <div class="news-content"><p>et bibendum leo metus vel magna. In dapibus ac tellus non rutrum. Integer ut nisi risus.</p></div>
-                            </div>
+                                <!-- vertical News Description -->
+								  <div class="news-description">
+										<div class="news-time">
+											<i class="fa fa-clock-o"></i> <?php echo $obj['time']; ?>
+										</div>
+										<div class="news-title"><a href="<?php echo $obj['link']; ?>"><?php echo $obj['title']; ?></a></div>
+										<div class="news-content"><?php getDescription($obj); ?></div>
+									</div>
                         </div>
                     </div>
                     <div class="col l3 col m6 col s12">
                         <!-- vertical News Box -->
                         <div class="news vertical z-depth-1">
                             <!-- vertical News Image -->
-                            <div class="news-image">
-                                <img class="responsive-img" src="http://placehold.it/350x235?text=News Image" alt="news Image">
-                            </div>
-                            <!-- vertical News Description -->
-                            <div class="news-description">
-                                <div class="news-time">
-                                    <i class="fa fa-clock-o"></i> 9 min ago 
+							<?php $obj = loadData(); ?>
+                                <div class="news-image">
+                                    <img class="responsive-img" src="<?php echo $obj['thumbnail']; ?>" alt="news Image">
                                 </div>
-                                <div class="news-title"> <a href="javascript:void(0);"> Nam erat nulla, auctor a eros vitae, hendrerit efficitur magna. </a></div>
-                                <div class="news-content"><p>et bibendum leo metus vel magna. In dapibus ac tellus non rutrum. Integer ut nisi risus In dapibus ac tellus non rutrum</p></div>
-                            </div>
+                                <!-- vertical News Description -->
+								  <div class="news-description">
+										<div class="news-time">
+											<i class="fa fa-clock-o"></i> <?php echo $obj['time']; ?>
+										</div>
+										<div class="news-title"><a href="<?php echo $obj['link']; ?>"><?php echo $obj['title']; ?></a></div>
+										<div class="news-content"><?php getDescription($obj); ?></div>
+									</div>
                         </div>
                     </div>
                 </div>
               
                 <div class="row">
-                    <div class="col l6 col m6 col s12">
-                        <!-- News Blog Solid Box -->
-                        <div class="news-blog solid z-depth-1">
-                            <!-- News Blog Category -->
-                            <div class="news-category">
-                                <span class="pink">More</span>
-                                <!-- Dropdown -->
-                                <div class="news-dropdown">
-                                    <a class="dropdown-button" href="javascript:void(0);" data-activates="dropdown1"><i class="fa fa-ellipsis-v "></i></a>
-                                    <ul id="dropdown1" class="dropdown-content">
-                                        <li><a href="javascript:void(0);">Option 1</a></li>
-                                        <li><a href="javascript:void(0);">Option 1</a></li>
-                                        <li><a href="javascript:void(0);">Option 1</a></li>
-                                    </ul>
-                                </div>
+                   <div class="col l6 col m6 col s12">
+                        <!-- News Blog Box -->
+                        <div class="news-blog z-depth-1">
+                            <!-- News Blog Image -->
+							<?php $obj = loadData(); ?>
+                            
+                            <div class="image">
+                                <img class="responsive-img" src="<?php echo $obj['thumbnail']; ?>" alt="news Image">
                             </div>
+                            <!-- News Blog Category -->
+                            
                             <!-- News Blog Description -->
-                            <div class="news-description center-align">
-                                <div class="quote"><i class="fa fa-quote-left"></i></div>
-                                <div class="news-title"> <a href="javascript:void(0);"> Nam erat nulla, auctor a eros vitae, hendrerit efficitur magna et bibendum leo metus vel magna.  </a></div>
-                                <div class="news-content"><p>President of ThemeLeague <br> Dark Waider</p></div>
+							
+                            <div class="news-description">
+                                <div class="news-time">
+                                    <?php echo $obj['time']; ?>
+                                </div>
+                                <div class="news-title"> <a href="<?php echo $obj['link']; ?>"><?php echo $obj['title']; ?></a></div>
+                                <div class="news-content"><?php getDescription($obj); ?></div>
                             </div>
                         </div>
                     </div>
@@ -371,29 +399,21 @@ function loadData(){
                         <!-- News Blog Box -->
                         <div class="news-blog z-depth-1">
                             <!-- News Blog Image -->
+							<?php $obj = loadData(); ?>
+                            
                             <div class="image">
-                                <img class="responsive-img" src="http://placehold.it/350x235?text=News Image" alt="news Image">
+                                <img class="responsive-img" src="<?php echo $obj['thumbnail']; ?>" alt="news Image">
                             </div>
                             <!-- News Blog Category -->
-                            <div class="news-category">
-                                <span class="green">Money</span>
-                                <!-- Dropdown -->
-                                <div class="news-dropdown">
-                                    <a class="dropdown-button" href="javascript:void(0);" data-activates="dropdown2"><i class="fa fa-ellipsis-v "></i></a>
-                                    <ul id="dropdown2" class="dropdown-content">
-                                        <li><a href="javascript:void(0);">Option 1</a></li>
-                                        <li><a href="javascript:void(0);">Option 1</a></li>
-                                        <li><a href="javascript:void(0);">Option 1</a></li>
-                                    </ul>
-                                </div>
-                            </div>
+                            
                             <!-- News Blog Description -->
+							
                             <div class="news-description">
                                 <div class="news-time">
-                                    21 min ago 
+                                    <?php echo $obj['time']; ?>
                                 </div>
-                                <div class="news-title"> <a href="javascript:void(0);">Party Sweepsto Israel <br> election Victory</a></div>
-                                <div class="news-content"><p>et bibendum leo metus vel magna. In dapibus <br> ac tellus non rutrum. Integer.</p></div>
+                                <div class="news-title"> <a href="<?php echo $obj['link']; ?>"><?php echo $obj['title']; ?></a></div>
+                                <div class="news-content"><?php getDescription($obj); ?></div>
                             </div>
                         </div>
                     </div>
@@ -402,166 +422,12 @@ function loadData(){
                 <section class="section">
                     <div class="row">
                         <div class="col l12 col m12 col s12">
-                            <img alt="news Image" src="http://placehold.it/350x235?text=News Image" class="responsive-img z-depth-1">
+                            <iframe src="https://www.youtube.com/embed/GDpmVUEjagg" style="width:100%;height:500px;" frameborder="0" allowfullscreen></iframe>
                         </div>
                     </div>
                 </section>
 
-                <section class="section">
-                    <div class="row">
-                        <div class="col l6 col m12 col s12">
-                            <div class="z-depth-1">
-                                <!-- Horizontal News Box -->
-                                <div class="news horizontal">
-                                    <div class="col l4 col m4 col s12 no-padding">
-                                        <!-- Horizontal News Image -->
-                                        <div class="news-image">
-                                            <img src="http://placehold.it/350x360?text=News Image" class="responsive-img" alt="news Image">
-                                        </div>
-                                    </div>
-                                    <div class="col l8 col m8 col s12 no-padding">
-                                        <!-- Horizontal News  Description -->
-                                        <div class="news-description">
-                                            <div class="news-time">
-                                                <i class="fa fa-clock-o"></i> 9 min ago 
-                                            </div>
-                                            <div class="news-title"><a href="javascript:void(0);"> Nam erat nulla, auctor a eros vitae, hendrerit efficitur magna. </a></div>
-                                            <div class="news-content"><p>et bibendum leo metus vel magna. In dapibus ac tellus non rutrum. Integer ut nisi risus. Mauris bibendum semper quam.</p></div>
-                                        </div>
-                                    </div>
-                                </div>
-                              
-                                <!-- Horizontal News Box -->
-                                <div class="news horizontal no-border">
-                                    <div class="col l4 col m4 col s12 no-padding">
-                                        <!-- Horizontal News Image -->
-                                        <div class="news-image">
-                                            <img src="http://placehold.it/350x360/f5f5f5?text=News Image" class="responsive-img" alt="news Image">
-                                        </div>
-                                    </div>
-                                    <div class="col l8 col m8 col s12 no-padding">
-                                        <!-- Horizontal News Description -->
-                                        <div class="news-description">
-                                            <div class="news-time">
-                                                <i class="fa fa-clock-o"></i> 9 min ago
-                                            </div>
-                                            <div class="news-title"><a href="javascript:void(0);"> Nam erat nulla, auctor a eros vitae, hendrerit efficitur magna.</a></div>
-                                            <div class="news-content"><p>et bibendum leo metus vel magna. In dapibus ac tellus non rutrum. Integer ut nisi risus. Mauris bibendum semper quam.</p></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                      
-                        <div class="col l3 col m6 col s12">
-                            <!-- vertical News Box -->
-                            <div class="news vertical z-depth-1">
-                                <!-- vertical News Image -->
-                                <div class="news-image">
-                                    <img src="http://placehold.it/350x235?text=News Image" class="responsive-img" alt="news Image">
-                                </div>
-                                <!-- vertical News Description -->
-                                <div class="news-description">
-                                    <div class="news-time">
-                                        <i class="fa fa-clock-o"></i> 9 min ago 
-                                    </div>
-                                    <div class="news-title"><a href="javascript:void(0);"> Nam erat nulla, auctor a eros vitae, hendrerit efficitur magna leo metus vel magna. </a></div>
-                                    <div class="news-content"><p>et bibendum leo metus vel magna. In dapibus ac tellus non rutrum Integer.</p></div>
-                                </div>
-                            </div>
-                        </div>
-                      
-                        <div class="col l3 col m6 col s12">
-                            <!-- vertical News Box -->
-                            <div class="news vertical z-depth-1">
-                                <!-- vertical News Image -->
-                                <div class="news-image">
-                                    <img src="http://placehold.it/350x235?text=News Image" class="responsive-img" alt="news Image">
-                                </div>
-                                <!-- vertical News Description -->
-                                <div class="news-description">
-                                    <div class="news-time">
-                                        <i class="fa fa-clock-o"></i> 9 min ago 
-                                    </div>
-                                    <div class="news-title"><a href="javascript:void(0);"> Nam erat nulla, auctor a eros vitae, hendrerit efficitur. </a></div>
-                                    <div class="news-content"><p>et bibendum leo metus vel magna. In dapibus ac tellus non rutrum. Integer ut nisi risus.</p></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                  
-                  
-                    <div class="row">
-                        <div class="col l3 col m6 col s12">
-                            <!-- vertical News Box -->
-                            <div class="news vertical z-depth-1">
-                                <!-- vertical News Image -->
-                                <div class="news-image">
-                                    <img alt="news Image" src="http://placehold.it/350x235?text=News Image" class="responsive-img">
-                                </div>
-                                <!-- vertical News Description -->
-                                <div class="news-description">
-                                    <div class="news-time">
-                                        <i class="fa fa-clock-o"></i> 9 min ago 
-                                    </div>
-                                    <div class="news-title"><a href="javascript:void(0);"> Nam erat nulla, auctor a eros vitae, hendrerit efficitur magna leo metus vel magna. </a></div>
-                                    <div class="news-content"><p>et bibendum leo metus vel magna. In dapibus ac tellus non rutrum. Integer ut nisi risus.</p></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col l3 col m6 col s12">
-                            <!-- vertical News Box -->
-                            <div class="news vertical z-depth-1">
-                                <!-- vertical News Image -->
-                                <div class="news-image">
-                                    <img alt="news Image" src="http://placehold.it/350x235?text=News Image" class="responsive-img">
-                                </div>
-                                <!-- vertical News Description -->
-                                <div class="news-description">
-                                    <div class="news-time">
-                                        <i class="fa fa-clock-o"></i> 9 min ago 
-                                    </div>
-                                    <div class="news-title"> <a href="javascript:void(0);"> Nam erat nulla, auctor a eros vitae, hendrerit efficitur magna. </a></div>
-                                    <div class="news-content"><p>et bibendum leo metus vel magna. In dapibus ac tellus non rutrum. Integer ut nisi risus In dapibus ac tellus non rutrum tellus non rutrum.</p></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col l3 col m6 col s12">
-                            <!-- vertical News Box -->
-                            <div class="news vertical z-depth-1">
-                                <!-- vertical News Image -->
-                                <div class="news-image">
-                                    <img alt="news Image" src="http://placehold.it/350x235?text=News Image" class="responsive-img">
-                                </div>
-                                <!-- vertical News Description -->
-                                <div class="news-description">
-                                    <div class="news-time">
-                                        <i class="fa fa-clock-o"></i> 9 min ago 
-                                    </div>
-                                    <div class="news-title"><a href="javascript:void(0);"> Nam erat nulla, auctor a eros vitae, hendrerit efficitur magna leo metus vel magna. </a></div>
-                                    <div class="news-content"><p>et bibendum leo metus vel magna. In dapibus ac tellus non rutrum. Integer ut nisi risus.</p></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col l3 col m6 col s12">
-                            <!-- vertical News Box -->
-                            <div class="news vertical z-depth-1">
-                                <!-- vertical News Image -->
-                                <div class="news-image">
-                                    <img alt="news Image" src="http://placehold.it/350x235?text=News Image" class="responsive-img">
-                                </div>
-                                <!-- vertical News Description -->
-                                <div class="news-description">
-                                    <div class="news-time">
-                                        <i class="fa fa-clock-o"></i> 9 min ago 
-                                    </div>
-                                    <div class="news-title"> <a href="javascript:void(0);"> Nam erat nulla, auctor a eros vitae, hendrerit efficitur magna. </a></div>
-                                    <div class="news-content"><p>et bibendum leo metus vel magna. In dapibus ac tellus non rutrum. Integer ut nisi risus In dapibus ac tellus non rutrum tellus non rutrum.</p></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                
             </div>
         </div>
         
@@ -571,9 +437,7 @@ function loadData(){
                 <div class="row">
                     <div class="col l12 col m12 col s12">
                         <!-- Footer Button -->
-                        <div class="footer-button center-align">
-                            <span class="mdi-action-history"></span>
-                        </div>
+    
                     </div>
   
                     <div class="col l12 col m12 col s12">
@@ -583,7 +447,7 @@ function loadData(){
                 </div>
                 <!-- Footer Logo -->
                 <div class="logo">
-                    <a href="index.html"><img src="images/material-logo.png" alt="Logo"></a>
+                    <a href="index.html"><img style="height:100px;" src="images/material-logo.png" alt="Logo"></a>
                 </div>
                 <div class="row">
                     <div class="col l12 col m12 col s12">
