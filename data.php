@@ -70,11 +70,11 @@ $data[8]['thumbnail'] = "https://i.guim.co.uk/img/media/c9ed219060003449c793a845
 $data[8]['time'] = "1 week ago";
 $data[8]['link'] = "http://www.theguardian.com/media/2016/jun/10/axel-springer-buys-emarketer-to-reduce-digital-ad-dependency";
 
-$data[9]['title'] = "<b>Qwant</b> Music : un moteur de recherche spécialisé en musique";
-$data[9]['description'] = "Après une version Junior spécialement adaptée aux enfants de 6 à 12 ans, le moteur de recherche « européen » vient de lancer <b>Qwant</b> Music";
+$data[9]['title'] = "<b>Qwant</b> Music: a specialized music search engine";
+$data[9]['description'] = "After recently releasing the specially adapted version for children from 6 to 12 years, <b>Qwant</b> Junior, the \"European\" search engine has launched <b>Qwant</b> Music";
 $data[9]['thumbnail'] = "http://fr.cdn.v5.futura-sciences.com/builds/images/thumbs/a/aae8a0799f_qwantMusic_logo.jpg";
 $data[9]['time'] = "1 week ago";
 $data[9]['link'] = "http://www.futura-sciences.com/magazines/high-tech/infos/actu/d/internet-qwant-music-moteur-recherche-specialise-musique-63116/";
 
-$data[10]['video_link'] = "https://www.youtube.com/embed/GDpmVUEjagg?start=111";
+$data[10]['video_link'] = "https://www.youtube.com/embed/GDpmVUEjagg?start=113";
 ?>
