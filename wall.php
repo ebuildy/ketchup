@@ -286,7 +286,7 @@ function getMixRow(){
                                 <span class="searchbox-icon"><i class="mdi-action-search"></i></span>
                             </form>
                             <!-- LogIn Link -->
-                            <a href="javascript:" class="right login"><img src="https://avatars1.githubusercontent.com/u/5296748?v=3&amp;s=460" style="
+                            <a href="javascript:" class="right login"><img src="<?php echo $avatar; ?>" style="
     border-radius: 8px;
     height: 50px;
     margin: 5px 0;
