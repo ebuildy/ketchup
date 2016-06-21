@@ -390,9 +390,9 @@ function getMixRow(){
 			
 				<?php
 				getMixRow(); 
-				getRow4x4(); 
-				getRow2x2();
-				getRowUnique();
+				getMixRow(); 
+				getMixRow();
+				getMixRow();
 				?>
               
             </div>

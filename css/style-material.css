@@ -649,7 +649,7 @@ ul.pgwSlider > li span, .pgwSlider > .ps-list > li span
 .news.horizontal .news-description{ border-bottom: 1px solid #eaeaea; height: 200px; }
 .news.vertidcal .news-image img { height: 180px; width: 100%; }
 .news.horizontal{ height: 200px; }
-.news.horizontal .news-image img { display: inherit; /*height: 210px;*/ }
+.news.horizontal .news-image img { display: inherit;width: 100%;  /*height: 210px;*/ }
 .news-time  {
   color: #fe7faa;
   margin: 15px 0;
