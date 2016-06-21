@@ -286,15 +286,7 @@ function getMixRow(){
                                 <span class="searchbox-icon"><i class="mdi-action-search"></i></span>
                             </form>
                             <!-- LogIn Link -->
-                            <a href="javascript:" class="right login"><img src="<?php echo $avatar; ?>" style="
-    border-radius: 8px;
-    height: 50px;
-    margin: 5px 0;
-    /* border: 1px solid blue; */
-    -webkit-box-shadow: 0px 0px 8px 0px rgba(255,255,255,1);
-    -moz-box-shadow: 0px 0px 8px 0px rgba(255,255,255,1);
-    box-shadow: 0px 0px 8px 0px rgba(255,255,255,1);
-"></a>
+                            <a href="javascript:" class="right login"><img class="img-avatar" src="<?php echo $avatar; ?>" /></a>
                         </div>
                     </div>
                 </div>
@@ -396,14 +388,9 @@ function getMixRow(){
       
         <!-- Main Wrapper -->
         <div class="wrapper">
-<nav role="navigation" class="hide-on-small-only" style="
-    background: white;margin-bottom: 10px;
-">
-                <div class="nav-wrapper menu-category" style="color:black;text-transform:uppercase;font-weight: bold;">
-					Digital content that matters only to you
-                </div>
-            </nav>		
             <div class="container">
+
+                <h1>Digital content that matters only to you</h1>
 			
 				<?php
 				getMixRow(); 
@@ -411,7 +398,6 @@ function getMixRow(){
 				getRow2x2();
 				getRowUnique();
 				?>
-              
             </div>
         </div>
         
