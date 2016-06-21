@@ -1846,3 +1846,17 @@ nav ul a{ padding-left: 15px !important; padding-right: 15px !important; font-si
 .news.vertical .news-image {
     max-height: 168px;
 }
+
+.tag-place
+{
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    background: red;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    border-radius: 32px;
+    color: white;
+}

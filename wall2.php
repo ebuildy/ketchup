@@ -7,15 +7,15 @@ $places = array_unique($places);
 
 shuffle($places);
 
-$places = array_slice($places, 0, min(5, count($places)));
+$places = array_slice($places, 0, min(10, count($places)));
 
-$parallelcurl = new ParallelCurl(10);
+$parallelcurl = new ParallelCurl(3);
 
 $placesData = [];
 
 foreach($places as $place)
 {
-    $parallelcurl->startRequest('https://api.qwant.com/api/search/news?q=' . urlencode($place) . '&locale=' . $locale, 'on_request_done', array('q' => $place, 'count' => 5));
+    $parallelcurl->startRequest('https://api.qwant.com/api/search/news?q=' . urlencode($place) . '&locale=' . $locale, 'on_request_done', array('q' => $place, 'type' => 'place'));
 }
 
 function on_request_done($content, $url, $ch, $data)
@@ -26,6 +26,11 @@ function on_request_done($content, $url, $ch, $data)
 
     if (!empty($buffer) && isset($buffer->data))
     {
+        foreach($buffer->data->result->items as &$item)
+        {
+            $item->tags = $data;
+        }
+
         $placesData = array_merge($placesData, $buffer->data->result->items);
     }
 }
@@ -47,13 +52,13 @@ foreach($placesData as $_data)
             'description' => $_data->desc,
             'link'       => $_data->url,
             'time'       => 'Today',
+            'tags'       => $_data->tags,
             'thumbnail'  => $_data->media[0]->url
         ];
     }
 }
 
-include("wall3.php");
-
+include("wall.php");
 
 function getParam($name, $default = null)
 {

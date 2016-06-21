@@ -1,6 +1,9 @@
 <?php
 
-require('data.php');
+if (!isset($data))
+{
+    require('data.php');
+}
 
 $currentIndex = 0;
 
@@ -43,24 +46,38 @@ function getRow4x4(){
 	for( $i = 0 ; $i < 4 ; $i++){
 		$obj = loadData();
 ?>
-
-                    <div class="col l3 col m6 col s12">
-                        <!-- vertical News Box -->
-                        <div class="news vertical z-depth-1">
-                            <!-- vertical News Image -->
-                                <div class="news-image">
-                                    <img class="responsive-img" src="<?php echo $obj['thumbnail']; ?>" alt="news Image">
-                                </div>
-                                <!-- vertical News Description -->
-								  <div class="news-description">
-										<div class="news-time">
-											<i class="fa fa-clock-o"></i> <?php echo $obj['time']; ?>
-										</div>
-										<div class="news-title"><a href="<?php echo $obj['link']; ?>"><?php echo $obj['title']; ?></a></div>
-										<div class="news-content"><?php getDescription($obj); ?></div>
-									</div>
-                        </div>
+        <div class="col l3 col m6 col s12">
+            <!-- vertical News Box -->
+            <div class="news vertical z-depth-1">
+                <!-- vertical News Image -->
+                    <div class="news-image">
+                        <img class="responsive-img" src="<?php echo $obj['thumbnail']; ?>" alt="news Image">
                     </div>
+                    <!-- vertical News Description -->
+                  <div class="news-description">
+                        <div class="news-time">
+                            <i class="fa fa-clock-o"></i> <?php echo $obj['time']; ?>
+                        </div>
+                        <div class="news-title"><a href="<?php echo $obj['link']; ?>"><?php echo $obj['title']; ?></a></div>
+                        <div class="news-content"><?php getDescription($obj); ?></div>
+                          <div>
+                              <?php
+                              foreach($obj['tags'] as $tagName => $tag)
+                              {
+                                  if ($tagName === 'type')
+                                  {
+                                      echo '<span class="tag-place"><i class="fa fa-map"></i></span>';
+                                  }
+                                  else
+                                  {
+                                      echo '<span class="tag">' . $tag . '</span>';
+                                  }
+                              }
+                              ?>
+                          </div>
+                    </div>
+            </div>
+        </div>
 <?php	
 	}
 ?>
