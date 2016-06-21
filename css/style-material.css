@@ -107,7 +107,7 @@ a:focus { outline: none; }
 .news.horizontal .news-image img{     width: auto; max-width:none; height:200px;}
 .wrapper{
   position: relative;
-  margin-top:140px;
+  margin-top:150px;
 }
 .wrapper.margin-top {
   display: inline-block;
@@ -168,6 +168,7 @@ header.header-fix a , header.header-fix img{
 
 header.header-fix.scroll, header.header-fix.scroll .header-top{
 		height:70px;
+		transition: height 0.2s;
 }
 .header-fix.scroll .img-avatar{
 		margin-top:8px;
@@ -184,21 +185,21 @@ header.header-fix.scroll, header.header-fix.scroll .header-top{
 	display:none;
 }
 
-
-
 .header-fix.scroll .logo a{
 	position: absolute;
     left: 40px;
 	right: initial;
 	top: initial;
 	bottom: initial;
+    transition: left 0.6s;
 }
 .header-fix.scroll .logo img{
-	    height: 45px;	
+	height: 45px;	
+	transition: height 0.2s;
 }
 
 header.header-fix .nav-wrapper.menu-category a{ color: #444; padding: 0 30px;}
-header.header-fix .header-top{ height: 140px; line-height: 60px;  }
+header.header-fix .header-top{ height: 140px; line-height: 60px; transition: height 0.2s;  }
 .header-top {
   background-color: #2f3e9b;
   height: 90px;
@@ -304,12 +305,17 @@ nav .button-collapse i{ font-size: 2.1rem; }
   text-align: center;
   line-height: 0;
 }
-.logo > a{ display: inline-block; line-height: 0;     position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;}
+.logo > a{ 
+	display: inline-block; 
+	line-height: 0;     
+	position: absolute;
+    left: calc(50% - 153px);
+	transition: left 0.6s;
+}
+.logo > a img{ 
+	height: 108px;
+	transition: height 0.2s;
+}
 .header-fix .logo{ padding: 10px 0;}
 
 .brand-logo {
@@ -420,7 +426,7 @@ nav .button-collapse i{ font-size: 2.1rem; }
 .searchbox.cart{ right: 60px;}
 .header-fix .searchbox{ margin: 10px  0 0 0; }
 .searchbox-open{ width:250px; background: #fff; }
-.login { color: #95a2e7; font-size: 18px; margin-right: 100px; padding-top: 3px; transition-duration: 0.3s; height:70px;}
+.login { color: #95a2e7; font-size: 18px; padding-top: 3px; transition-duration: 0.3s; height:70px;}
 .login:hover{ color: #fff; transition-duration: 0.3s; }
 .search.cart{ right: 80px;}
 
