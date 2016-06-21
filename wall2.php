@@ -34,9 +34,25 @@ $parallelcurl->finishAllRequests();
 
 shuffle($placesData);
 
-$placesData = array_slice($placesData, 0, min(10, count($placesData)));
+$placesData = array_slice($placesData, 0, min(20, count($placesData)));
 
-die(json_encode($placesData));
+$data = [];
+
+foreach($placesData as $_data)
+{
+    if (isset($_data->media[0]->url))
+    {
+        $data [] = [
+            'title'      => $_data->title,
+            'description' => $_data->desc,
+            'link'       => $_data->url,
+            'time'       => 'Today',
+            'thumbnail'  => $_data->media[0]->url
+        ];
+    }
+}
+
+include("wall3.php");
 
 
 function getParam($name, $default = null)
