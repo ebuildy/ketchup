@@ -4,6 +4,13 @@ $locale = getParam('locale', 'en_US');
 
 $parallelcurl = new ParallelCurl(3);
 
+$parallelcurl->setOptions([
+    CURLOPT_USERAGENT => "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36",
+    CURLOPT_HTTPHEADER => [
+
+    ]
+]);
+
 // PLACES -------------------------------
 $places = explode(',', getParam('places', ''));
 
@@ -77,13 +84,13 @@ $avatar = 'https://graph.facebook.com/' . getParam('user_id') . '/picture/square
 
 foreach($placesData as $_data)
 {
-    if (isset($_data->media[0]->url))
+    if (isset($_data->media[0]))
     {
         $video = false;
 
         foreach($_data->media as $media)
         {
-            if ($media->type === 'video')
+            if (isset($media->type) && $media->type === 'video')
             {
                 $video = $media;
             }
@@ -95,7 +102,7 @@ foreach($placesData as $_data)
             'link'        => $_data->url,
             'time'        => time_elapsed_string($_data->date),
             'tags'        => $_data->tags,
-            'thumbnail'   => $_data->media[0]->url
+            'thumbnail'   => $_data->media[0]->pict->url
         ];
 
         if ($video !== false)
